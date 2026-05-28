@@ -1,0 +1,268 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* Sidebar Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Schedule Grid Layout */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 80px repeat(6, minmax(120px, 1fr));
+}
+.time-row {
+  min-height: 80px;
+}
+
+/* Sidebar Collapsible State */
+.sidebar {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 260px;
+  overflow-x: hidden;
+}
+.main-content {
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: 260px;
+}
+.header-wrapper {
+  transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  left: 260px;
+}
+
+body.sidebar-collapsed .sidebar {
+  width: 84px;
+}
+body.sidebar-collapsed .main-content {
+  margin-left: 84px;
+}
+body.sidebar-collapsed .header-wrapper {
+  left: 84px;
+}
+
+body.sidebar-collapsed .sidebar-text,
+body.sidebar-collapsed .dropdown-icon,
+body.sidebar-collapsed .logo-text-container {
+  display: none;
+}
+
+/* Hide raw text nodes using font-size 0 */
+body.sidebar-collapsed .sidebar a,
+body.sidebar-collapsed .sidebar button {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 0;
+  gap: 0;
+}
+
+body.sidebar-collapsed .sidebar a > div,
+body.sidebar-collapsed .sidebar button > div {
+  justify-content: center;
+  font-size: 0;
+  gap: 0;
+}
+
+/* Reset icon size */
+body.sidebar-collapsed .sidebar a .material-symbols-outlined,
+body.sidebar-collapsed .sidebar button .material-symbols-outlined {
+  font-size: 24px;
+}
+
+body.sidebar-collapsed .sidebar-header {
+  padding-left: 0;
+  padding-right: 0;
+  justify-content: center;
+}
+
+body.sidebar-collapsed .sidebar-footer {
+  justify-content: center;
+}
+
+/* Hide user profile section in sidebar */
+body.sidebar-collapsed .sidebar-user {
+  display: none;
+}
+
+/* Responsive media queries */
+@media (max-width: 1024px) {
+  .sidebar {
+    position: fixed !important;
+    left: -260px !important;
+    width: 260px !important;
+    z-index: 50 !important;
+  }
+  
+  body.sidebar-open .sidebar {
+    left: 0 !important;
+  }
+  
+  .main-content {
+    margin-left: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 100px !important;
+  }
+  
+  .header-wrapper {
+    left: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Backdrop overlay */
+  #sidebar-backdrop {
+    display: block !important;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  body.sidebar-open #sidebar-backdrop {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  /* Grids and responsiveness */
+  .grid.grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .grid.grid-cols-12 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  
+  /* Reset grid col spans inside responsive grid-cols-12 */
+  .col-span-4, .col-span-8, .col-span-12, .col-span-9, .col-span-3 {
+    grid-column: span 1 / span 1 !important;
+  }
+  
+  /* Schedule container */
+  .schedule-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Tables horizontally scrollable */
+  .overflow-x-auto {
+    width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid.grid-cols-4 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  
+  /* Header adjustment */
+  header .max-w-xl {
+    max-width: 180px !important;
+  }
+  header .text-right {
+    display: none !important;
+  }
+  header .gap-8 {
+    gap: 12px !important;
+  }
+  header .material-symbols-outlined:last-child {
+    display: none !important;
+  }
+  
+  /* Padding adjustment for main container in mobile */
+  .p-container-padding, .p-8 {
+    padding: 16px !important;
+  }
+  
+  .pt-\[112px\] {
+    padding-top: 96px !important;
+  }
+  
+  /* Section and page title sizing */
+  .font-page-title, .text-page-title, .text-3xl {
+    font-size: 24px !important;
+    line-height: 32px !important;
+  }
+  
+  .font-section-title, .text-section-title {
+    font-size: 18px !important;
+    line-height: 24px !important;
+  }
+}
+
+/* Unified search bar styling */
+.unified-search-bar {
+  display: flex !important;
+  align-items: center !important;
+  background-color: #f2f4f8 !important;
+  border-radius: 9999px !important; /* Fully rounded search pill */
+  padding: 8px 16px !important;
+  width: 100% !important;
+  max-width: 560px !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.unified-search-bar:focus-within {
+  border-color: rgba(0, 41, 125, 0.2) !important;
+  box-shadow: 0 0 0 3px rgba(0, 41, 125, 0.1) !important;
+  background-color: #ffffff !important; /* White bg on focus */
+}
+
+.unified-search-bar #sidebar-toggle-btn {
+  padding: 6px !important;
+  margin-right: 8px !important;
+  border-radius: 9999px !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.unified-search-bar #sidebar-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.unified-search-bar .search-icon {
+  font-size: 20px !important;
+  color: #94a3b8 !important; /* text-muted */
+  margin-right: 8px !important;
+  user-select: none !important;
+}
+
+.unified-search-bar input.search-input {
+  width: 100% !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 14px !important;
+  color: #0f172a !important; /* text-primary */
+  outline: none !important;
+}
+
+.unified-search-bar input.search-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+

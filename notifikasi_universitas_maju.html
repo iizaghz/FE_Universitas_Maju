@@ -1,0 +1,549 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Notifikasi - Universitas Maju</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="text-on-surface">
+    <!-- Sidebar Navigation -->
+    <aside
+      class="fixed left-0 top-0 h-full sidebar z-50 bg-gradient-to-b from-sidebar-gradient-start to-sidebar-gradient-end shadow-lg flex flex-col p-base-16 gap-base-8 text-white"
+    >
+      <div class="flex items-center gap-base-12 mb-base-24">
+        <div
+          class="w-[46px] h-[46px] shrink-0 bg-white rounded-xl flex items-center justify-center shadow-sm card-hover"
+        >
+          <span
+            class="material-symbols-outlined text-blue-600 text-[32px]"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >school</span
+          >
+        </div>
+        <div class="flex flex-col justify-center logo-text-container">
+          <h1 class="font-page-title text-[18px] font-bold leading-none mb-1">
+            Universitas Maju
+          </h1>
+          <p class="text-[9.5px] opacity-80 uppercase tracking-widest leading-snug">
+            Unggul • Inovatif • Berintegritas
+          </p>
+        </div>
+      </div>
+      <nav
+        class="flex flex-col gap-1 overflow-y-auto flex-grow custom-scrollbar"
+      >
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="dashboard"
+        >
+          <span class="material-symbols-outlined">dashboard</span> Dashboard
+        </a>
+        <div class="relative">
+          <button
+            class="dropdown-btn w-full flex items-center justify-between px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+            data-group="akademik"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined">school</span> Akademik
+            </div>
+            <span
+              class="material-symbols-outlined text-sm dropdown-icon transition-transform"
+              >keyboard_arrow_down</span
+            >
+          </button>
+          <div class="dropdown-content pl-12 flex flex-col gap-1 mt-1 hidden">
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="jadwal_kuliah_universitas_maju.html"
+              data-page="jadwal_kuliah"
+              >Jadwal Kuliah</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="krs_refined_universitas_maju.html"
+              data-page="krs_refined"
+              >KRS</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="nilai_universitas_maju.html#transkrip"
+              data-page="nilai_transkrip"
+              >Transkrip Nilai</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="kurikulum_universitas_maju.html"
+              data-page="kurikulum"
+              >Kurikulum</a
+            >
+          </div>
+        </div>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="pengumuman"
+        >
+          <span class="material-symbols-outlined">campaign</span> Pengumuman
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="agenda_universitas_maju.html"
+          data-page="agenda"
+        >
+          <span class="material-symbols-outlined">event</span> Agenda
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="notifikasi_universitas_maju.html"
+          data-page="notifikasi"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          Notifikasi
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="profil_pengguna_universitas_maju.html"
+          data-page="profil_pengguna"
+        >
+          <span class="material-symbols-outlined">person</span> Profil
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="help_bantuan_universitas_maju.html"
+          data-page="help_bantuan"
+        >
+          <span class="material-symbols-outlined">help</span> Bantuan
+        </a>
+      </nav>
+      <div class="pt-base-16 mt-auto">
+        <a
+          class="flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="login_universitas_maju.html"
+        >
+          <span class="material-symbols-outlined">logout</span> Keluar
+        </a>
+      </div>
+    </aside>
+
+    <!-- Top Navigation -->
+    <header
+      class="fixed top-0 right-0 header-wrapper h-[80px] bg-surface-container-lowest dark:bg-inverse-surface border-b border-border-gray z-40 flex items-center justify-between px-8 w-full"
+    >
+      <div
+        class="flex items-center gap-4 bg-surface-container-low px-4 py-2 rounded-xl border border-border-gray w-96"
+      >
+          <button id="sidebar-toggle-btn" class="p-2 hover:bg-black/5 rounded-full transition-colors flex items-center justify-center text-text-muted hover:text-primary shrink-0">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          
+        <span
+          class="material-symbols-outlined text-text-muted"
+          data-icon="search"
+          >search</span
+        >
+        <input
+          class="bg-transparent border-none outline-none focus:ring-0 text-label font-label w-full placeholder:text-text-muted"
+          placeholder="Cari notifikasi..."
+          type="text"
+        />
+      </div>
+      <div class="flex items-center gap-8">
+        <button
+          class="relative p-2 hover:bg-light-blue-bg transition-colors rounded-full text-primary"
+        >
+          <span class="material-symbols-outlined" data-icon="notifications"
+            >notifications</span
+          >
+          <span
+            class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"
+          ></span>
+        </button>
+        <div class="h-8 w-[1px] bg-border-gray"></div>
+        <div
+          class="flex items-center gap-4 cursor-pointer group hover:bg-surface-container-low px-4 py-2 rounded-[14px] transition-all"
+        >
+          <div class="text-right">
+            <p
+              class="text-sm font-bold text-text-primary group-hover:text-primary transition-colors"
+            >
+              Andi Pratama
+            </p>
+            <p class="text-xs text-text-muted">210401010042</p>
+          </div>
+          <img
+            alt="Andi Pratama"
+            class="w-10 h-10 rounded-full border-2 border-primary/10 group-hover:border-primary transition-all"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuApHekM4luO0ZNI7IZRTQ6ry65TiXEN8MPSn0wOwyds9Csq9VS9frvr9DY-edIUPw1KyclppXymqGD4tZ43u1AQDNvjcbqtViakIeu0LBQjEKDLA9hFCse_DKSwTCJTTNhVANBIxjgB9y7FSEbRmMbw3kercMCj2XkTswa_oQqu3jIAITVWQ_--Kxp_0W17WrSt0PY3Aw2ghZa-VSkkNMn-1X89Ox3RPRbzc2FlwFEhGiP2o9RwShi_7_siR1CH4Dk6iA-oXC496ZbL"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="main-content pt-[80px] min-h-screen pb-20 relative">
+      <div class="p-container-padding max-w-[1200px] mx-auto">
+        <div class="flex items-end justify-between mb-8">
+          <div>
+            <h2 class="font-page-title text-page-title text-text-primary">
+              Notifikasi
+            </h2>
+            <p class="text-text-secondary mt-1">
+              Pantau semua aktivitas akademik dan administratif Anda.
+            </p>
+          </div>
+          <button
+            class="flex items-center gap-2 text-primary font-label text-label px-4 py-2 hover:bg-light-blue-bg rounded-lg transition-colors"
+          >
+            <span class="material-symbols-outlined text-sm" data-icon="done_all"
+              >done_all</span
+            >
+            Tandai Semua Dibaca
+          </button>
+        </div>
+        <!-- Filters -->
+        <div class="flex gap-2 mb-8 p-1 bg-surface-container rounded-xl w-fit">
+          <button
+            class="filter-tab active px-6 py-2.5 rounded-lg text-label font-label bg-white text-primary shadow-sm transition-all card-hover"
+            onclick="filterNotif('all')"
+          >
+            Semua Notifikasi
+          </button>
+          <button
+            class="filter-tab px-6 py-2.5 rounded-lg text-label font-label text-text-secondary hover:text-primary transition-all"
+            onclick="filterNotif('academic')"
+          >
+            Akademik
+          </button>
+          <button
+            class="filter-tab px-6 py-2.5 rounded-lg text-label font-label text-text-secondary hover:text-primary transition-all"
+            onclick="filterNotif('finance')"
+          >
+            Keuangan
+          </button>
+          <button
+            class="filter-tab px-6 py-2.5 rounded-lg text-label font-label text-text-secondary hover:text-primary transition-all"
+            onclick="filterNotif('system')"
+          >
+            Informasi Sistem
+          </button>
+        </div>
+        <!-- Notification List -->
+        <div class="space-y-4">
+          <!-- Card 1: Academic -->
+          <div
+            class="group relative bg-white rounded-2xl border border-border-gray p-6 shadow-sm hover:shadow-md transition-all cursor-pointer flex items-start gap-5 card-hover"
+            data-category="academic"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-status-info-bg flex items-center justify-center text-status-info-text shrink-0"
+            >
+              <span class="material-symbols-outlined" data-icon="school"
+                >school</span
+              >
+            </div>
+            <div class="flex-1">
+              <div class="flex justify-between items-start">
+                <h3
+                  class="font-card-title text-card-title text-text-primary group-hover:text-primary transition-colors"
+                >
+                  Perubahan Jadwal Kuliah - Pemrograman Web
+                </h3>
+                <span
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider"
+                  >Baru</span
+                >
+              </div>
+              <p class="text-body text-text-secondary mt-1 line-clamp-2">
+                Kuliah sesi Jumat, 25 Oktober dipindahkan ke ruang Lab Komputer
+                3 pukul 13.00 WIB dikarenakan renovasi gedung.
+              </p>
+              <div class="flex items-center gap-4 mt-4">
+                <span
+                  class="flex items-center gap-1.5 text-metadata text-text-muted"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="schedule"
+                    >schedule</span
+                  >
+                  2 jam yang lalu
+                </span>
+                <span class="h-1 w-1 bg-border-gray rounded-full"></span>
+                <span
+                  class="text-metadata text-primary font-semibold hover:underline"
+                  >Lihat Detail</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card 2: Finance -->
+          <div
+            class="group relative bg-white rounded-2xl border border-border-gray p-6 shadow-sm hover:shadow-md transition-all cursor-pointer flex items-start gap-5 card-hover"
+            data-category="finance"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-status-success-bg flex items-center justify-center text-status-success-text shrink-0"
+            >
+              <span
+                class="material-symbols-outlined"
+                data-icon="account_balance_wallet"
+                >account_balance_wallet</span
+              >
+            </div>
+            <div class="flex-1">
+              <div class="flex justify-between items-start">
+                <h3
+                  class="font-card-title text-card-title text-text-primary group-hover:text-primary transition-colors"
+                >
+                  Pembayaran UKT Semester Ganjil Berhasil
+                </h3>
+                <span class="text-metadata text-text-muted"
+                  >Kemarin, 14:20</span
+                >
+              </div>
+              <p class="text-body text-text-secondary mt-1">
+                Terima kasih. Pembayaran UKT Anda untuk Semester Ganjil
+                2024/2025 telah terverifikasi oleh sistem keuangan.
+              </p>
+              <div
+                class="flex items-center gap-2 mt-4 bg-surface px-3 py-2 rounded-lg border border-border-gray w-fit"
+              >
+                <span
+                  class="material-symbols-outlined text-sm text-text-muted"
+                  data-icon="description"
+                  >description</span
+                >
+                <span class="text-metadata text-text-primary"
+                  >Kwitansi_UKT_210401.pdf</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Card 3: System -->
+          <div
+            class="group relative bg-white rounded-2xl border border-border-gray p-6 shadow-sm hover:shadow-md transition-all cursor-pointer flex items-start gap-5 card-hover"
+            data-category="system"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-status-warning-bg flex items-center justify-center text-status-warning-text shrink-0"
+            >
+              <span class="material-symbols-outlined" data-icon="security"
+                >security</span
+              >
+            </div>
+            <div class="flex-1">
+              <div class="flex justify-between items-start">
+                <h3
+                  class="font-card-title text-card-title text-text-primary group-hover:text-primary transition-colors"
+                >
+                  Peringatan Keamanan: Login Baru Terdeteksi
+                </h3>
+                <span class="text-metadata text-text-muted">23 Okt 2024</span>
+              </div>
+              <p class="text-body text-text-secondary mt-1">
+                Akun Anda baru saja masuk dari perangkat baru di Jakarta,
+                Indonesia menggunakan Chrome di Windows.
+              </p>
+              <div class="flex items-center gap-4 mt-4">
+                <span
+                  class="flex items-center gap-1.5 text-metadata text-text-muted"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="devices"
+                    >devices</span
+                  >
+                  Windows NT 10.0
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4: Academic -->
+          <div
+            class="group relative bg-white rounded-2xl border border-border-gray p-6 shadow-sm hover:shadow-md transition-all cursor-pointer flex items-start gap-5 card-hover"
+            data-category="academic"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-status-info-bg flex items-center justify-center text-status-info-text shrink-0"
+            >
+              <span class="material-symbols-outlined" data-icon="assignment"
+                >assignment</span
+              >
+            </div>
+            <div class="flex-1">
+              <div class="flex justify-between items-start">
+                <h3
+                  class="font-card-title text-card-title text-text-primary group-hover:text-primary transition-colors"
+                >
+                  Tugas Baru: Analisis Struktur Data
+                </h3>
+                <span class="text-metadata text-text-muted">22 Okt 2024</span>
+              </div>
+              <p class="text-body text-text-secondary mt-1">
+                Dosen pengampu telah mengunggah materi dan tugas baru untuk
+                pertemuan ke-8. Batas pengumpulan: 30 Okt 2024.
+              </p>
+              <div class="mt-4 flex gap-2">
+                <span
+                  class="bg-surface border border-border-gray text-text-primary px-3 py-1 rounded-lg text-metadata flex items-center gap-1"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="attach_file"
+                    >attach_file</span
+                  >
+                  Case Study.pdf
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Detail Overlay (Hidden by Default) -->
+        <div
+          class="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 flex justify-end transition-opacity opacity-0 pointer-events-none"
+          id="detailOverlay"
+        >
+          <div
+            class="w-[500px] bg-white h-full shadow-2xl translate-x-full transition-transform duration-300 p-8 flex flex-col"
+          >
+            <div class="flex justify-between items-center mb-10">
+              <span
+                class="text-primary font-bold tracking-widest text-[10px] uppercase"
+                >Notification Detail</span
+              >
+              <button
+                class="p-2 hover:bg-surface-container rounded-full transition-colors"
+                onclick="closeDetail()"
+              >
+                <span class="material-symbols-outlined" data-icon="close"
+                  >close</span
+                >
+              </button>
+            </div>
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-14 h-14 rounded-2xl flex items-center justify-center text-white bg-primary"
+                id="detailIcon"
+              >
+                <span
+                  class="material-symbols-outlined text-2xl"
+                  data-icon="school"
+                  >school</span
+                >
+              </div>
+              <div>
+                <p
+                  class="text-metadata text-text-muted uppercase"
+                  id="detailCategory"
+                >
+                  Akademik
+                </p>
+                <p class="text-metadata text-text-secondary" id="detailTime">
+                  Jumat, 25 Okt 2024 • 09:15 WIB
+                </p>
+              </div>
+            </div>
+            <h2
+              class="font-section-title text-section-title text-text-primary mb-4 leading-tight"
+              id="detailTitle"
+            >
+              Perubahan Jadwal Kuliah - Pemrograman Web
+            </h2>
+            <div class="h-[1px] bg-border-gray w-full mb-6"></div>
+            <div
+              class="text-body text-text-secondary space-y-4 flex-1"
+              id="detailContent"
+            >
+              <p>Yth. Mahasiswa Informatika,</p>
+              <p>
+                Diberitahukan bahwa terdapat perubahan lokasi perkuliahan untuk
+                mata kuliah Pemrograman Web (IF-302) kelas A. Dikarenakan adanya
+                pemeliharaan infrastruktur di Gedung C, maka perkuliahan akan
+                dialihkan ke:
+              </p>
+              <ul class="list-disc pl-5 space-y-2">
+                <li>
+                  <strong>Lokasi:</strong> Laboratorium Komputer Utama (Gedung B
+                  Lt. 2)
+                </li>
+                <li><strong>Waktu:</strong> 13.00 - 15.30 WIB</li>
+                <li><strong>Agenda:</strong> Praktikum Framework React.js</li>
+              </ul>
+              <p>Mohon maklum dan harap datang tepat waktu.</p>
+            </div>
+            <div class="pt-8 mt-auto border-t border-border-gray">
+              <p class="text-label font-label text-text-primary mb-4">
+                Lampiran Terkait
+              </p>
+              <div class="flex flex-col gap-2">
+                <div
+                  class="p-4 bg-surface border border-border-gray rounded-xl flex items-center justify-between hover:border-primary cursor-pointer transition-all"
+                >
+                  <div class="flex items-center gap-3">
+                    <div
+                      class="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-primary border border-border-gray"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        data-icon="picture_as_pdf"
+                        >picture_as_pdf</span
+                      >
+                    </div>
+                    <div>
+                      <p class="text-sm font-semibold text-text-primary">
+                        Jadwal_Revisi_Okt.pdf
+                      </p>
+                      <p class="text-xs text-text-muted">1.2 MB</p>
+                    </div>
+                  </div>
+                  <span
+                    class="material-symbols-outlined text-text-muted"
+                    data-icon="download"
+                    >download</span
+                  >
+                </div>
+              </div>
+              <button
+                class="w-full mt-8 bg-primary text-white py-3 rounded-xl font-label text-label hover:bg-primary-container transition-all shadow-lg shadow-primary/20"
+              >
+                Konfirmasi Kehadiran
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Component -->
+      <footer
+        class="absolute bottom-0 right-0 left-0 py-4 flex justify-between items-center px-8 w-full bg-transparent"
+      >
+        <p class="font-metadata text-metadata text-text-muted">
+          © 2024 Universitas Maju. All rights reserved.
+        </p>
+        <a
+          class="font-metadata text-metadata text-text-muted hover:text-primary transition-colors"
+          href="#"
+          >Sistem Informasi Akademik v1.0.0</a
+        >
+      </footer>
+    </main>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="notifikasi.js"></script>
+  </body>
+</html>

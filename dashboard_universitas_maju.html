@@ -1,0 +1,702 @@
+<!doctype html>
+<html class="light" lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dashboard | Sistem Informasi Akademik Universitas Maju</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- SideNavBar -->
+    <!-- Sidebar Navigation -->
+    <aside
+      class="fixed left-0 top-0 h-full sidebar z-50 bg-gradient-to-b from-sidebar-gradient-start to-sidebar-gradient-end shadow-lg flex flex-col p-base-16 gap-base-8 text-white"
+    >
+      <div class="flex items-center gap-base-12 mb-base-24">
+        <div
+          class="w-[46px] h-[46px] shrink-0 bg-white rounded-xl flex items-center justify-center shadow-sm card-hover"
+        >
+          <span
+            class="material-symbols-outlined text-blue-600 text-[32px]"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >school</span
+          >
+        </div>
+        <div class="flex flex-col justify-center logo-text-container">
+          <h1 class="font-page-title text-[18px] font-bold leading-none mb-1">
+            Universitas Maju
+          </h1>
+          <p class="text-[9.5px] opacity-80 uppercase tracking-widest leading-snug">
+            Unggul • Inovatif • Berintegritas
+          </p>
+        </div>
+      </div>
+      <nav
+        class="flex flex-col gap-1 overflow-y-auto flex-grow custom-scrollbar"
+      >
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="dashboard"
+        >
+          <span class="material-symbols-outlined">dashboard</span> Dashboard
+        </a>
+        <div class="relative">
+          <button
+            class="dropdown-btn w-full flex items-center justify-between px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+            data-group="akademik"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined">school</span> Akademik
+            </div>
+            <span
+              class="material-symbols-outlined text-sm dropdown-icon transition-transform"
+              >keyboard_arrow_down</span
+            >
+          </button>
+          <div class="dropdown-content pl-12 flex flex-col gap-1 mt-1 hidden">
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="jadwal_kuliah_universitas_maju.html"
+              data-page="jadwal_kuliah"
+              >Jadwal Kuliah</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="krs_refined_universitas_maju.html"
+              data-page="krs_refined"
+              >KRS</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="nilai_universitas_maju.html#transkrip"
+              data-page="nilai_transkrip"
+              >Transkrip Nilai</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="kurikulum_universitas_maju.html"
+              data-page="kurikulum"
+              >Kurikulum</a
+            >
+          </div>
+        </div>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="pengumuman"
+        >
+          <span class="material-symbols-outlined">campaign</span> Pengumuman
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="agenda_universitas_maju.html"
+          data-page="agenda"
+        >
+          <span class="material-symbols-outlined">event</span> Agenda
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="notifikasi_universitas_maju.html"
+          data-page="notifikasi"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          Notifikasi
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="profil_pengguna_universitas_maju.html"
+          data-page="profil_pengguna"
+        >
+          <span class="material-symbols-outlined">person</span> Profil
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="help_bantuan_universitas_maju.html"
+          data-page="help_bantuan"
+        >
+          <span class="material-symbols-outlined">help</span> Bantuan
+        </a>
+      </nav>
+      <div class="pt-base-16 mt-auto">
+        <a
+          class="flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="login_universitas_maju.html"
+        >
+          <span class="material-symbols-outlined">logout</span> Keluar
+        </a>
+      </div>
+    </aside>
+
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 right-0 right-0 header-wrapper h-[80px] z-40 bg-surface-container-lowest border-b border-divider-gray flex items-center justify-between px-section-gap"
+    >
+      <div class="flex items-center w-full max-w-xl">
+          <button id="sidebar-toggle-btn" class="p-2 hover:bg-black/5 rounded-full transition-colors flex items-center justify-center text-text-muted hover:text-primary shrink-0">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          
+        <div class="relative w-full">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-muted"
+            >search</span
+          >
+          <input
+            class="w-full h-11 pl-12 pr-4 bg-background border-none rounded-xl focus:ring-2 focus:ring-primary/20 font-body text-body transition-shadow"
+            placeholder="Cari menu, informasi, dll..."
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="flex items-center gap-8">
+        <button
+          class="relative p-2 text-text-secondary hover:bg-surface-container-low rounded-full transition-colors active:opacity-80"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          <span
+            class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white"
+            >3</span
+          >
+        </button>
+        <div
+          class="flex items-center gap-3 pl-4 border-l border-divider-gray cursor-pointer group"
+        >
+          <div class="text-right">
+            <p class="font-label text-label text-text-primary leading-tight">
+              Andi Pratama
+            </p>
+            <p class="font-metadata text-metadata text-text-muted">Mahasiswa</p>
+          </div>
+          <img
+            alt="Andi Pratama"
+            class="w-10 h-10 rounded-full bg-primary-fixed ring-2 ring-transparent group-hover:ring-primary/20 transition-all"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIEThCaEpab2tpDonm_jePrW9JS7fycrN9dQT4y2lkxoB9IB9-guGyQ9b9nwo9gfNfJNwX02D05z3SaK9M6__6lHSO7X-Pmu4SCXB72-BgftV3MdgEXBxb6dDHsRY5roRxTgDpiVO3yFUlGOPrcIKxa0pWEQ4iEFzYXtROtNmkclPLGBlWLsMBobCzlX1KMQQqdzhaQaVWQtO0Mu35VJt1Kwb-rL64R3JCin1FE1fbCoNh6aSEaQC9oLZvfxFjX07sQWgGXcvq0fGH"
+          />
+          <span class="material-symbols-outlined text-text-muted"
+            >expand_more</span
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main
+      class="main-content pt-[112px] min-h-screen pb-base-32 px-container-padding"
+    >
+      <!-- Greeting -->
+      <div class="mb-base-32">
+        <h2
+          class="font-page-title text-[32px] font-bold text-text-primary flex items-center gap-2"
+        >
+          Selamat datang, Andi Pratama 👋
+        </h2>
+        <p class="font-body text-text-secondary mt-1">
+          Berikut ringkasan informasi akademik Anda.
+        </p>
+      </div>
+      <!-- Academic Summary Cards (Informasi Akademik) -->
+      <section class="mb-base-32">
+        <h3
+          class="font-section-title text-section-title text-text-primary mb-6"
+        >
+          Informasi Akademik
+        </h3>
+        <div class="grid grid-cols-4 gap-base-24">
+          <!-- Program Studi -->
+          <div
+            class="bg-white p-base-24 rounded-2xl border border-divider-gray shadow-soft hover:shadow-md transition-shadow group"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors"
+              >
+                <span class="material-symbols-outlined text-2xl">school</span>
+              </div>
+              <div>
+                <p class="font-metadata text-text-muted mb-1">Program Studi</p>
+                <h4
+                  class="font-card-title text-card-title text-text-primary leading-tight"
+                >
+                  Sistem Informasi
+                </h4>
+                <p class="font-metadata text-text-muted mt-1">
+                  Fakultas Ilmu Komputer
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Semester -->
+          <div
+            class="bg-white p-base-24 rounded-2xl border border-divider-gray shadow-soft hover:shadow-md transition-shadow group"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-status-success-bg flex items-center justify-center text-status-success-text"
+              >
+                <span class="material-symbols-outlined text-2xl">book</span>
+              </div>
+              <div>
+                <p class="font-metadata text-text-muted mb-1">Semester</p>
+                <h4
+                  class="font-card-title text-card-title text-text-primary leading-tight"
+                >
+                  4 (Genap 2023/2024)
+                </h4>
+                <div class="flex items-center gap-2 mt-2">
+                  <span
+                    class="w-2 h-2 rounded-full bg-status-success-text"
+                  ></span>
+                  <span
+                    class="font-badge-text text-badge-text text-status-success-text uppercase"
+                    >Aktif</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SKS -->
+          <div
+            class="bg-white p-base-24 rounded-2xl border border-divider-gray shadow-soft hover:shadow-md transition-shadow group"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-status-info-bg flex items-center justify-center text-status-info-text"
+              >
+                <span class="material-symbols-outlined text-2xl"
+                  >event_note</span
+                >
+              </div>
+              <div class="flex-1">
+                <p class="font-metadata text-text-muted mb-1">SKS Diambil</p>
+                <h4
+                  class="font-card-title text-card-title text-text-primary leading-tight"
+                >
+                  20 SKS
+                </h4>
+                <p class="font-metadata text-text-muted mt-1 mb-3">
+                  Total SKS Lulus: 62 SKS
+                </p>
+                <div
+                  class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"
+                >
+                  <div class="bg-primary h-full w-[62%]"></div>
+                </div>
+                <p
+                  class="font-metadata text-text-muted text-right mt-1 text-[10px]"
+                >
+                  62%
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- IPK -->
+          <div
+            class="bg-white p-base-24 rounded-2xl border border-divider-gray shadow-soft hover:shadow-md transition-shadow group"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="w-12 h-12 rounded-xl bg-status-warning-bg flex items-center justify-center text-status-warning-text"
+              >
+                <span
+                  class="material-symbols-outlined text-2xl"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >stars</span
+                >
+              </div>
+              <div>
+                <p class="font-metadata text-text-muted mb-1">IPK</p>
+                <h4
+                  class="font-card-title text-[24px] font-bold text-text-primary leading-tight"
+                >
+                  3.65
+                </h4>
+                <div
+                  class="mt-2 inline-flex items-center px-2 py-0.5 rounded-full bg-status-success-bg text-status-success-text font-badge-text text-[10px]"
+                >
+                  Sangat Memuaskan
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Bento Grid Sections -->
+      <div class="grid grid-cols-12 gap-base-24">
+        <!-- Pengumuman (Announcement) -->
+        <div class="col-span-4 flex flex-col gap-base-16">
+          <div class="flex items-center justify-between">
+            <h3 class="font-card-title text-card-title text-text-primary">
+              Pengumuman
+            </h3>
+            <a
+              class="font-label text-label text-primary hover:underline transition-all"
+              href="#"
+              >Lihat semua</a
+            >
+          </div>
+          <div
+            class="bg-white rounded-2xl border border-divider-gray shadow-soft overflow-hidden"
+          >
+            <div class="divide-y divide-divider-gray">
+              <div
+                class="p-base-16 flex gap-4 hover:bg-light-blue-bg/50 transition-colors cursor-pointer group"
+              >
+                <div
+                  class="shrink-0 w-10 h-10 rounded-full bg-status-danger-bg flex items-center justify-center text-status-danger-text"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >assignment_late</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start">
+                    <h5
+                      class="font-table-text text-table-text text-text-primary font-semibold group-hover:text-primary transition-colors"
+                    >
+                      KRS Semester Genap 2023/2024
+                    </h5>
+                    <span
+                      class="font-metadata text-text-muted text-[10px] shrink-0"
+                      >10 Jan 2024</span
+                    >
+                  </div>
+                  <p
+                    class="font-body text-text-secondary text-xs mt-0.5 line-clamp-1"
+                  >
+                    KRS dapat dilakukan mulai tanggal 15 - 22 Januari 2024.
+                  </p>
+                  <span
+                    class="inline-block mt-2 px-2 py-0.5 bg-status-info-bg text-status-info-text text-[10px] rounded-full font-bold"
+                    >Baru</span
+                  >
+                </div>
+              </div>
+              <div
+                class="p-base-16 flex gap-4 hover:bg-light-blue-bg/50 transition-colors cursor-pointer group"
+              >
+                <div
+                  class="shrink-0 w-10 h-10 rounded-full bg-status-success-bg flex items-center justify-center text-status-success-text"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >account_balance_wallet</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start">
+                    <h5
+                      class="font-table-text text-table-text text-text-primary font-semibold group-hover:text-primary transition-colors"
+                    >
+                      Pembayaran UKT Semester Genap
+                    </h5>
+                    <span
+                      class="font-metadata text-text-muted text-[10px] shrink-0"
+                      >08 Jan 2024</span
+                    >
+                  </div>
+                  <p
+                    class="font-body text-text-secondary text-xs mt-0.5 line-clamp-1"
+                  >
+                    Pembayaran dapat dilakukan hingga 31 Januari 2024.
+                  </p>
+                  <span
+                    class="inline-block mt-2 px-2 py-0.5 bg-status-info-bg text-status-info-text text-[10px] rounded-full font-bold"
+                    >Baru</span
+                  >
+                </div>
+              </div>
+              <div
+                class="p-base-16 flex gap-4 hover:bg-light-blue-bg/50 transition-colors cursor-pointer group"
+              >
+                <div
+                  class="shrink-0 w-10 h-10 rounded-full bg-status-warning-bg flex items-center justify-center text-status-warning-text"
+                >
+                  <span class="material-symbols-outlined text-[20px]"
+                    >menu_book</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <div class="flex justify-between items-start">
+                    <h5
+                      class="font-table-text text-table-text text-text-primary font-semibold group-hover:text-primary transition-colors"
+                    >
+                      Pelaksanaan Ujian Tengah Semester (UTS)
+                    </h5>
+                    <span
+                      class="font-metadata text-text-muted text-[10px] shrink-0"
+                      >05 Jan 2024</span
+                    >
+                  </div>
+                  <p
+                    class="font-body text-text-secondary text-xs mt-0.5 line-clamp-1"
+                  >
+                    UTS akan dilaksanakan pada 18 - 29 Maret 2024.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="w-full py-4 text-primary font-label text-label hover:bg-primary/5 transition-colors border-t border-divider-gray flex items-center justify-center gap-2"
+            >
+              Lihat semua pengumuman
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- Agenda Terbaru -->
+        <div class="col-span-4 flex flex-col gap-base-16">
+          <div class="flex items-center justify-between">
+            <h3 class="font-card-title text-card-title text-text-primary">
+              Agenda Terbaru
+            </h3>
+            <a
+              class="font-label text-label text-primary hover:underline transition-all"
+              href="#"
+              >Lihat semua</a
+            >
+          </div>
+          <div
+            class="bg-white rounded-2xl border border-divider-gray shadow-soft overflow-hidden p-base-8"
+          >
+            <div class="space-y-2">
+              <!-- Agenda Item 1 -->
+              <div
+                class="flex gap-4 p-base-12 rounded-xl hover:bg-surface-container-low transition-colors group"
+              >
+                <div
+                  class="shrink-0 w-14 h-14 bg-background rounded-xl border border-divider-gray flex flex-col items-center justify-center overflow-hidden"
+                >
+                  <span class="font-bold text-lg text-text-primary leading-none"
+                    >15</span
+                  >
+                  <span
+                    class="text-[10px] text-text-muted uppercase tracking-wider mt-1"
+                    >MEI</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-0.5">
+                    <h5
+                      class="font-table-text text-table-text font-bold text-text-primary group-hover:text-primary transition-colors"
+                    >
+                      Batas Akhir KRS
+                    </h5>
+                    <span
+                      class="px-2 py-0.5 bg-status-warning-bg text-status-warning-text text-[9px] rounded-full uppercase font-bold"
+                      >Mendatang</span
+                    >
+                  </div>
+                  <p class="text-xs text-text-muted">
+                    Semester Genap 2023/2024
+                  </p>
+                  <p class="text-[10px] text-text-muted font-medium mt-1">
+                    23:59 WIB
+                  </p>
+                </div>
+              </div>
+              <!-- Agenda Item 2 -->
+              <div
+                class="flex gap-4 p-base-12 rounded-xl hover:bg-surface-container-low transition-colors group"
+              >
+                <div
+                  class="shrink-0 w-14 h-14 bg-background rounded-xl border border-divider-gray flex flex-col items-center justify-center overflow-hidden"
+                >
+                  <span class="font-bold text-lg text-text-primary leading-none"
+                    >20</span
+                  >
+                  <span
+                    class="text-[10px] text-text-muted uppercase tracking-wider mt-1"
+                    >MEI</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-0.5">
+                    <h5
+                      class="font-table-text text-table-text font-bold text-text-primary group-hover:text-primary transition-colors"
+                    >
+                      Kuliah Umum
+                    </h5>
+                    <span
+                      class="px-2 py-0.5 bg-status-info-bg text-status-info-text text-[9px] rounded-full uppercase font-bold"
+                      >Mendatang</span
+                    >
+                  </div>
+                  <p class="text-xs text-text-muted italic">
+                    "Inovasi Teknologi di Era Digital"
+                  </p>
+                  <p class="text-[10px] text-text-muted font-medium mt-1">
+                    09:00 - 12:00 WIB
+                  </p>
+                </div>
+              </div>
+              <!-- Agenda Item 3 -->
+              <div
+                class="flex gap-4 p-base-12 rounded-xl hover:bg-surface-container-low transition-colors group"
+              >
+                <div
+                  class="shrink-0 w-14 h-14 bg-background rounded-xl border border-divider-gray flex flex-col items-center justify-center overflow-hidden"
+                >
+                  <span class="font-bold text-lg text-text-primary leading-none"
+                    >27</span
+                  >
+                  <span
+                    class="text-[10px] text-text-muted uppercase tracking-wider mt-1"
+                    >MEI</span
+                  >
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between mb-0.5">
+                    <h5
+                      class="font-table-text text-table-text font-bold text-text-primary group-hover:text-primary transition-colors"
+                    >
+                      UTS Semester Genap
+                    </h5>
+                    <span
+                      class="px-2 py-0.5 bg-status-success-bg text-status-success-text text-[9px] rounded-full uppercase font-bold"
+                      >Mendatang</span
+                    >
+                  </div>
+                  <p class="text-xs text-text-muted">27 Mei - 7 Juni 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Notifikasi -->
+        <div class="col-span-4 flex flex-col gap-base-16">
+          <div class="flex items-center justify-between">
+            <h3 class="font-card-title text-card-title text-text-primary">
+              Notifikasi
+            </h3>
+            <a
+              class="font-label text-label text-primary hover:underline transition-all"
+              href="#"
+              >Lihat semua</a
+            >
+          </div>
+          <div
+            class="bg-white rounded-2xl border border-divider-gray shadow-soft overflow-hidden"
+          >
+            <div class="divide-y divide-divider-gray">
+              <div
+                class="p-base-16 flex items-start gap-4 hover:bg-surface-container-low transition-colors cursor-pointer group"
+              >
+                <div
+                  class="w-8 h-8 shrink-0 rounded-full bg-status-info-bg flex items-center justify-center text-status-info-text"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >notifications</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="font-table-text text-text-primary text-xs font-semibold leading-normal"
+                  >
+                    Pembayaran UKT berhasil diverifikasi.
+                  </p>
+                  <p class="font-metadata text-text-muted text-[10px] mt-1">
+                    2 jam yang lalu
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-base-16 flex items-start gap-4 hover:bg-surface-container-low transition-colors cursor-pointer group"
+              >
+                <div
+                  class="w-8 h-8 shrink-0 rounded-full bg-status-success-bg flex items-center justify-center text-status-success-text"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >description</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="font-table-text text-text-primary text-xs font-semibold leading-normal"
+                  >
+                    Nilai mata kuliah Basis Data telah dipublikasikan.
+                  </p>
+                  <p class="font-metadata text-text-muted text-[10px] mt-1">
+                    5 jam yang lalu
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-base-16 flex items-start gap-4 hover:bg-surface-container-low transition-colors cursor-pointer group"
+              >
+                <div
+                  class="w-8 h-8 shrink-0 rounded-full bg-status-warning-bg flex items-center justify-center text-status-warning-text"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >calendar_month</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="font-table-text text-text-primary text-xs font-semibold leading-normal"
+                  >
+                    Pengingat: Batas akhir KRS 15 Mei 2024.
+                  </p>
+                  <p class="font-metadata text-text-muted text-[10px] mt-1">
+                    1 hari yang lalu
+                  </p>
+                </div>
+              </div>
+              <div
+                class="p-base-16 flex items-start gap-4 hover:bg-surface-container-low transition-colors cursor-pointer group"
+              >
+                <div
+                  class="w-8 h-8 shrink-0 rounded-full bg-status-danger-bg flex items-center justify-center text-status-danger-text"
+                >
+                  <span class="material-symbols-outlined text-sm"
+                    >campaign</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="font-table-text text-text-primary text-xs font-semibold leading-normal"
+                  >
+                    Pengumuman baru: KRS Semester Genap 2023/2024.
+                  </p>
+                  <p class="font-metadata text-text-muted text-[10px] mt-1">
+                    2 hari yang lalu
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer
+        class="mt-base-32 pt-base-16 border-t border-divider-gray flex justify-between items-center text-text-muted"
+      >
+        <p class="font-metadata text-metadata">
+          © 2024 Universitas Maju. All rights reserved.
+        </p>
+        <div class="flex items-center gap-4">
+          <span class="font-metadata text-metadata"
+            >Sistem Informasi Akademik v1.0.0</span
+          >
+        </div>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

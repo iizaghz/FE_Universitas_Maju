@@ -1,0 +1,803 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nilai Mahasiswa - Universitas Maju</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="bg-background text-on-surface">
+    <!-- Sidebar Navigation -->
+    <aside
+      class="fixed left-0 top-0 h-full sidebar z-50 bg-gradient-to-b from-sidebar-gradient-start to-sidebar-gradient-end shadow-lg flex flex-col p-base-16 gap-base-8 text-white"
+    >
+      <div class="flex items-center gap-base-12 mb-base-24">
+        <div
+          class="w-[46px] h-[46px] shrink-0 bg-white rounded-xl flex items-center justify-center shadow-sm card-hover"
+        >
+          <span
+            class="material-symbols-outlined text-blue-600 text-[32px]"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >school</span
+          >
+        </div>
+        <div class="flex flex-col justify-center logo-text-container">
+          <h1 class="font-page-title text-[18px] font-bold leading-none mb-1">
+            Universitas Maju
+          </h1>
+          <p class="text-[9.5px] opacity-80 uppercase tracking-widest leading-snug">
+            Unggul • Inovatif • Berintegritas
+          </p>
+        </div>
+      </div>
+      <nav
+        class="flex flex-col gap-1 overflow-y-auto flex-grow custom-scrollbar"
+      >
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="dashboard"
+        >
+          <span class="material-symbols-outlined">dashboard</span> Dashboard
+        </a>
+        <div class="relative">
+          <button
+            class="dropdown-btn w-full flex items-center justify-between px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+            data-group="akademik"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined">school</span> Akademik
+            </div>
+            <span
+              class="material-symbols-outlined text-sm dropdown-icon transition-transform"
+              >keyboard_arrow_down</span
+            >
+          </button>
+          <div class="dropdown-content pl-12 flex flex-col gap-1 mt-1 hidden">
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="jadwal_kuliah_universitas_maju.html"
+              data-page="jadwal_kuliah"
+              >Jadwal Kuliah</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="krs_refined_universitas_maju.html"
+              data-page="krs_refined"
+              >KRS</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="nilai_universitas_maju.html#transkrip"
+              data-page="nilai_transkrip"
+              >Transkrip Nilai</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="kurikulum_universitas_maju.html"
+              data-page="kurikulum"
+              >Kurikulum</a
+            >
+          </div>
+        </div>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="pengumuman"
+        >
+          <span class="material-symbols-outlined">campaign</span> Pengumuman
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="agenda_universitas_maju.html"
+          data-page="agenda"
+        >
+          <span class="material-symbols-outlined">event</span> Agenda
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="notifikasi_universitas_maju.html"
+          data-page="notifikasi"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          Notifikasi
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="profil_pengguna_universitas_maju.html"
+          data-page="profil_pengguna"
+        >
+          <span class="material-symbols-outlined">person</span> Profil
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="help_bantuan_universitas_maju.html"
+          data-page="help_bantuan"
+        >
+          <span class="material-symbols-outlined">help</span> Bantuan
+        </a>
+      </nav>
+      <div class="pt-base-16 mt-auto">
+        <a
+          class="flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="login_universitas_maju.html"
+        >
+          <span class="material-symbols-outlined">logout</span> Keluar
+        </a>
+      </div>
+    </aside>
+
+    <!-- Top Navigation Bar -->
+    <header
+      class="fixed top-0 right-0 right-0 header-wrapper h-[80px] z-40 bg-surface-container-lowest border-b border-divider-gray flex items-center justify-between px-section-gap"
+    >
+      <div class="flex-1 max-w-xl">
+        <div class="relative group">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline"
+            >search</span
+          >
+          <input
+            class="w-full bg-surface-container-low border-none rounded-full py-2.5 pl-12 pr-4 focus:ring-2 focus:ring-primary/20 text-sm font-label"
+            placeholder="Cari menu, informasi, dll..."
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="flex items-center gap-8">
+          <button id="sidebar-toggle-btn" class="p-2 hover:bg-black/5 rounded-full transition-colors flex items-center justify-center text-text-muted hover:text-primary shrink-0">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          
+        <div class="relative cursor-pointer">
+          <span class="material-symbols-outlined text-outline"
+            >notifications</span
+          >
+          <span
+            class="absolute -top-1 -right-1 w-4 h-4 bg-error text-white text-[10px] rounded-full flex items-center justify-center font-bold"
+            >3</span
+          >
+        </div>
+        <div class="h-8 w-[1px] bg-divider-gray"></div>
+        <div
+          class="flex items-center gap-4 cursor-pointer group hover:bg-surface-container-low px-4 py-2 rounded-[14px] transition-all"
+        >
+          <div class="text-right">
+            <p
+              class="font-label text-label text-on-surface group-hover:text-primary transition-colors"
+            >
+              Andi Pratama
+            </p>
+            <p class="text-[12px] text-text-muted">Mahasiswa</p>
+          </div>
+          <img
+            alt="Andi Pratama"
+            class="w-10 h-10 rounded-full border-2 border-primary-fixed"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGtOU7gy5d4-yn6ccQ-XKQ_kxp5TpYBqjxVZgsbEbbiQKx66sAqFvKh9fJyMRzaOkEjk833IkHldYaTBTZ_Q4TBY4GIWYkNc9VgYVkl_rUZDy7PaN1h0tgs0nzW0RvTdRqjF_hW7Wxs-zwK60PuH3PWP1dZIWBOMbwhDxek52X2Ep5HJehHWAMTJsbkpH9JiexXvsTuuyr00P4K_TpCVhMIAPUX5Cf6MVEg--aYGgC2T9cJrXir-sZCQlfXrTnof2mwSnj8iXiddfA"
+          />
+          <span class="material-symbols-outlined text-outline"
+            >keyboard_arrow_down</span
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Main Content Area -->
+    <main class="main-content pt-[112px] p-container-padding min-h-screen">
+      <!-- Breadcrumb & Header -->
+      <div class="mb-base-32">
+        <nav class="flex items-center gap-2 text-text-muted text-sm mb-2">
+          <span>Akademik</span>
+          <span class="material-symbols-outlined text-xs">chevron_right</span>
+          <span class="text-primary font-medium">Nilai</span>
+        </nav>
+        <h2 class="font-page-title text-3xl font-bold text-on-surface mb-1">
+          Nilai Mahasiswa
+        </h2>
+        <p class="text-text-secondary text-sm">
+          Lihat informasi nilai akademik dan riwayat studi Anda.
+        </p>
+      </div>
+      <!-- Statistics Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-card-gap mb-base-32">
+        <!-- IPK Card -->
+        <div
+          class="bg-white p-base-24 rounded-2xl shadow-sm border border-border-gray hover:shadow-md transition-all duration-300 card-hover"
+        >
+          <p
+            class="text-text-secondary font-label text-xs uppercase tracking-wider mb-2"
+          >
+            IPK (Indeks Prestasi Kumulatif)
+          </p>
+          <div class="flex items-end justify-between">
+            <div>
+              <div class="flex items-center gap-3">
+                <span class="text-3xl font-bold text-primary">3.65</span>
+                <span
+                  class="bg-status-success-bg text-status-success-text px-3 py-1 rounded-full text-[11px] font-bold"
+                  >Sangat Baik</span
+                >
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-xs text-text-muted">
+                <span>Total SKS Lulus</span>
+                <span class="font-bold text-on-surface">62 SKS</span>
+              </div>
+            </div>
+            <div class="p-3 bg-light-blue-bg rounded-xl text-primary">
+              <span class="material-symbols-outlined text-[32px]"
+                >assessment</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- SKS Card -->
+        <div
+          class="bg-white p-base-24 rounded-2xl shadow-sm border border-border-gray hover:shadow-md transition-all duration-300 card-hover"
+        >
+          <p
+            class="text-text-secondary font-label text-xs uppercase tracking-wider mb-2"
+          >
+            SKS Ditempuh
+          </p>
+          <div class="flex items-end justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-3xl font-bold text-on-surface">78</span>
+                <span class="text-text-muted text-lg font-medium">SKS</span>
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-xs text-text-muted">
+                <span>SKS Lulus</span>
+                <span class="font-bold text-on-surface">62 SKS</span>
+              </div>
+            </div>
+            <div class="p-3 bg-status-info-bg rounded-xl text-status-info-text">
+              <span class="material-symbols-outlined text-[32px]"
+                >menu_book</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Total MK Card -->
+        <div
+          class="bg-white p-base-24 rounded-2xl shadow-sm border border-border-gray hover:shadow-md transition-all duration-300 card-hover"
+        >
+          <p
+            class="text-text-secondary font-label text-xs uppercase tracking-wider mb-2"
+          >
+            Total Mata Kuliah
+          </p>
+          <div class="flex items-end justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-3xl font-bold text-on-surface">24</span>
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-xs text-text-muted">
+                <span>Mata Kuliah Lulus</span>
+                <span class="font-bold text-on-surface">19</span>
+              </div>
+            </div>
+            <div class="p-3 bg-red-50 rounded-xl text-red-500">
+              <span class="material-symbols-outlined text-[32px]"
+                >collections_bookmark</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Predikat Card -->
+        <div
+          class="bg-white p-base-24 rounded-2xl shadow-sm border border-border-gray hover:shadow-md transition-all duration-300 card-hover"
+        >
+          <p
+            class="text-text-secondary font-label text-xs uppercase tracking-wider mb-2"
+          >
+            Predikat
+          </p>
+          <div class="flex items-end justify-between">
+            <div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="text-[20px] font-bold text-on-surface leading-tight"
+                  >Sangat Memuaskan</span
+                >
+              </div>
+              <div class="mt-4 flex items-center gap-2 text-xs text-text-muted">
+                <span>Status</span>
+                <span
+                  class="bg-status-success-bg text-status-success-text px-2 py-0.5 rounded text-[10px] font-bold uppercase"
+                  >Aktif</span
+                >
+              </div>
+            </div>
+            <div
+              class="p-3 bg-status-warning-bg rounded-xl text-status-warning-text"
+            >
+              <span class="material-symbols-outlined text-[32px]"
+                >emoji_events</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Grid for Table and Sidebar -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-card-gap">
+        <!-- Left Side: Table Area -->
+        <div class="lg:col-span-2 flex flex-col gap-base-24">
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-border-gray overflow-hidden card-hover"
+          >
+            <!-- Tab Header -->
+            <div
+              class="flex border-b border-divider-gray px-base-24 overflow-x-auto"
+            >
+              <button
+                class="px-6 py-4 border-b-2 border-primary text-primary font-bold whitespace-nowrap text-sm"
+              >
+                Nilai per Semester
+              </button>
+              <button
+                class="px-6 py-4 text-text-muted hover:text-primary transition-colors whitespace-nowrap text-sm"
+              >
+                Kartu Hasil Studi (KHS)
+              </button>
+              <button
+                class="px-6 py-4 text-text-muted hover:text-primary transition-colors whitespace-nowrap text-sm"
+              >
+                Riwayat Nilai
+              </button>
+            </div>
+            <div class="p-base-24">
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center gap-4">
+                  <span class="text-sm font-medium text-on-surface"
+                    >Semester</span
+                  >
+                  <div class="relative">
+                    <select
+                      class=" bg-surface-container-low border border-border-gray rounded-lg py-2 pl-4 pr-10 text-sm focus:ring-2 focus:ring-primary/20 outline-none min-w-[220px]"
+                    >
+                      <option>Genap 2023/2024</option>
+                      <option>Ganjil 2023/2024</option>
+                      <option>Genap 2022/2023</option>
+                    </select>
+                    <span
+                      class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline text-sm"
+                      >expand_more</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Main Course Table -->
+              <div class="overflow-x-auto border border-border-gray rounded-xl">
+                <table class="w-full text-left border-collapse">
+                  <thead class="bg-surface-container-low">
+                    <tr>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase"
+                      >
+                        No
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase"
+                      >
+                        Kode MK
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase"
+                      >
+                        Nama Mata Kuliah
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        SKS
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        Nilai Huruf
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        Nilai Angka
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        Bobot
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-divider-gray">
+                    <tr class="hover:bg-light-blue-bg/30 transition-colors">
+                      <td class="px-4 py-3 text-sm text-on-surface">1</td>
+                      <td class="px-4 py-3 text-sm text-primary font-medium">
+                        IF101
+                      </td>
+                      <td class="px-4 py-3 text-sm text-on-surface">
+                        Algoritma dan Pemrograman
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">A</td>
+                      <td class="px-4 py-3 text-sm text-center">4.00</td>
+                      <td class="px-4 py-3 text-sm text-center">12.00</td>
+                    </tr>
+                    <tr class="hover:bg-light-blue-bg/30 transition-colors">
+                      <td class="px-4 py-3 text-sm text-on-surface">2</td>
+                      <td class="px-4 py-3 text-sm text-primary font-medium">
+                        IF102
+                      </td>
+                      <td class="px-4 py-3 text-sm text-on-surface">
+                        Struktur Data
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">A</td>
+                      <td class="px-4 py-3 text-sm text-center">4.00</td>
+                      <td class="px-4 py-3 text-sm text-center">12.00</td>
+                    </tr>
+                    <tr class="hover:bg-light-blue-bg/30 transition-colors">
+                      <td class="px-4 py-3 text-sm text-on-surface">3</td>
+                      <td class="px-4 py-3 text-sm text-primary font-medium">
+                        IF103
+                      </td>
+                      <td class="px-4 py-3 text-sm text-on-surface">
+                        Basis Data
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">
+                        A-
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3.75</td>
+                      <td class="px-4 py-3 text-sm text-center">11.25</td>
+                    </tr>
+                    <tr class="hover:bg-light-blue-bg/30 transition-colors">
+                      <td class="px-4 py-3 text-sm text-on-surface">4</td>
+                      <td class="px-4 py-3 text-sm text-primary font-medium">
+                        IF104
+                      </td>
+                      <td class="px-4 py-3 text-sm text-on-surface">
+                        Sistem Operasi
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">
+                        B+
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3.50</td>
+                      <td class="px-4 py-3 text-sm text-center">10.50</td>
+                    </tr>
+                    <tr class="hover:bg-light-blue-bg/30 transition-colors">
+                      <td class="px-4 py-3 text-sm text-on-surface">5</td>
+                      <td class="px-4 py-3 text-sm text-primary font-medium">
+                        IF105
+                      </td>
+                      <td class="px-4 py-3 text-sm text-on-surface">
+                        Jaringan Komputer
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">
+                        A-
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3.75</td>
+                      <td class="px-4 py-3 text-sm text-center">11.25</td>
+                    </tr>
+                    <tr class="hover:bg-light-blue-bg/30 transition-colors">
+                      <td class="px-4 py-3 text-sm text-on-surface">6</td>
+                      <td class="px-4 py-3 text-sm text-primary font-medium">
+                        UM101
+                      </td>
+                      <td class="px-4 py-3 text-sm text-on-surface">
+                        Pendidikan Pancasila
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">2</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">A</td>
+                      <td class="px-4 py-3 text-sm text-center">4.00</td>
+                      <td class="px-4 py-3 text-sm text-center">8.00</td>
+                    </tr>
+                    <tr class="hover:bg-light-blue-bg/30 transition-colors">
+                      <td class="px-4 py-3 text-sm text-on-surface">7</td>
+                      <td class="px-4 py-3 text-sm text-primary font-medium">
+                        UM102
+                      </td>
+                      <td class="px-4 py-3 text-sm text-on-surface">
+                        Bahasa Indonesia
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">2</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">A</td>
+                      <td class="px-4 py-3 text-sm text-center">4.00</td>
+                      <td class="px-4 py-3 text-sm text-center">8.00</td>
+                    </tr>
+                  </tbody>
+                  <tfoot class="bg-light-blue-bg font-bold">
+                    <tr>
+                      <td class="px-4 py-3 text-primary text-sm" colspan="3">
+                        Total
+                      </td>
+                      <td class="px-4 py-3 text-primary text-center text-sm">
+                        19
+                      </td>
+                      <td class="px-4 py-3 text-primary text-center text-sm">
+                        -
+                      </td>
+                      <td class="px-4 py-3 text-primary text-center text-sm">
+                        3.84
+                      </td>
+                      <td class="px-4 py-3 text-primary text-center text-sm">
+                        73.00
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <p class="mt-4 text-[11px] text-text-muted italic">
+                Keterangan: Nilai Huruf (A: 4.00, A-: 3.75, B+: 3.50, B: 3.00,
+                C+: 2.50, C: 2.00, D: 1.00, E: 0)
+              </p>
+            </div>
+          </div>
+          <!-- Secondary Table: History -->
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-border-gray overflow-hidden card-hover"
+          >
+            <div class="px-base-24 py-4 border-b border-divider-gray">
+              <h3 class="font-card-title text-base">Riwayat Nilai</h3>
+            </div>
+            <div class="p-base-24">
+              <div class="overflow-x-auto border border-border-gray rounded-xl">
+                <table class="w-full text-left border-collapse">
+                  <thead class="bg-surface-container-low">
+                    <tr>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase"
+                      >
+                        No
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase"
+                      >
+                        Semester
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        SKS Diambil
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        SKS Lulus
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        IP Semester
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        IP Kumulatif
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        Predikat
+                      </th>
+                      <th
+                        class="px-4 py-3 font-medium text-[13px] text-text-secondary uppercase text-center"
+                      >
+                        Detail
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-divider-gray">
+                    <tr>
+                      <td class="px-4 py-3 text-sm">1</td>
+                      <td class="px-4 py-3 text-sm font-medium">
+                        Genap 2023/2024
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">19</td>
+                      <td class="px-4 py-3 text-sm text-center">19</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">
+                        3.84
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3.65</td>
+                      <td class="px-4 py-3 text-sm text-center">
+                        <span
+                          class="text-status-success-text text-[11px] font-bold"
+                          >Sangat Memuaskan</span
+                        >
+                      </td>
+                      <td class="px-4 py-3 text-center">
+                        <button
+                          class="px-3 py-1 bg-light-blue-bg text-primary text-[11px] font-bold rounded-lg hover:bg-primary/10"
+                        >
+                          Lihat Detail
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm">2</td>
+                      <td class="px-4 py-3 text-sm font-medium">
+                        Ganjil 2023/2024
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">20</td>
+                      <td class="px-4 py-3 text-sm text-center">20</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">
+                        3.60
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3.48</td>
+                      <td class="px-4 py-3 text-sm text-center">
+                        <span
+                          class="text-status-success-text text-[11px] font-bold"
+                          >Sangat Memuaskan</span
+                        >
+                      </td>
+                      <td class="px-4 py-3 text-center">
+                        <button
+                          class="px-3 py-1 bg-light-blue-bg text-primary text-[11px] font-bold rounded-lg hover:bg-primary/10"
+                        >
+                          Lihat Detail
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-4 py-3 text-sm">3</td>
+                      <td class="px-4 py-3 text-sm font-medium">
+                        Genap 2022/2023
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">20</td>
+                      <td class="px-4 py-3 text-sm text-center">20</td>
+                      <td class="px-4 py-3 text-sm text-center font-bold">
+                        3.42
+                      </td>
+                      <td class="px-4 py-3 text-sm text-center">3.35</td>
+                      <td class="px-4 py-3 text-sm text-center">
+                        <span class="text-on-surface text-[11px] font-bold"
+                          >Memuaskan</span
+                        >
+                      </td>
+                      <td class="px-4 py-3 text-center">
+                        <button
+                          class="px-3 py-1 bg-light-blue-bg text-primary text-[11px] font-bold rounded-lg hover:bg-primary/10"
+                        >
+                          Lihat Detail
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right Side: Sidebar Cards -->
+        <div class="flex flex-col gap-card-gap">
+          <!-- KHS Summary Card -->
+          <div
+            class="bg-white rounded-2xl shadow-sm border border-border-gray p-base-24 card-hover"
+          >
+            <h3
+              class="font-card-title text-base mb-6 border-b border-divider-gray pb-3"
+            >
+              Kartu Hasil Studi (KHS)
+            </h3>
+            <div class="space-y-4">
+              <div class="flex justify-between">
+                <span class="text-sm text-text-secondary">Nama</span>
+                <span class="text-sm font-semibold text-on-surface"
+                  >Andi Pratama</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-text-secondary">NIM</span>
+                <span class="text-sm font-semibold text-on-surface"
+                  >2101234567</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-text-secondary">Program Studi</span>
+                <span class="text-sm font-semibold text-on-surface text-right"
+                  >Sistem Informasi</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-text-secondary">Fakultas</span>
+                <span class="text-sm font-semibold text-on-surface text-right"
+                  >Fakultas Ilmu Komputer</span
+                >
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-text-secondary">Semester</span>
+                <span class="text-sm font-semibold text-on-surface"
+                  >Genap 2023/2024</span
+                >
+              </div>
+              <hr class="border-divider-gray" />
+              <div class="flex justify-between">
+                <span class="text-sm text-text-secondary"
+                  >Total SKS Diambil</span
+                >
+                <span class="text-sm font-bold text-on-surface">19 SKS</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-text-secondary">Total SKS Lulus</span>
+                <span class="text-sm font-bold text-on-surface">19 SKS</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-sm text-text-secondary">IP Semester</span>
+                <span class="text-sm font-bold text-primary">3.84</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-text-secondary">Predikat</span>
+                <span
+                  class="text-status-success-text text-[11px] font-bold uppercase"
+                  >Sangat Memuaskan</span
+                >
+              </div>
+            </div>
+            <button
+              class="w-full mt-8 bg-primary text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-primary-container transition-all shadow-md active:scale-[0.98]"
+            >
+              <span class="material-symbols-outlined text-sm">download</span>
+              Unduh KHS (PDF)
+            </button>
+          </div>
+          <!-- Info Alert Card -->
+          <div
+            class="bg-status-info-bg/40 border border-status-info-bg rounded-2xl p-base-24"
+          >
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-status-info-text"
+                >info</span
+              >
+              <div>
+                <h4 class="font-bold text-sm text-status-info-text mb-2">
+                  Informasi
+                </h4>
+                <p class="text-[12px] text-on-surface/80 leading-relaxed">
+                  IPK dihitung berdasarkan nilai kumulatif dari seluruh mata
+                  kuliah yang telah ditempuh.
+                  <br /><br />
+                  Pastikan tidak ada nilai yang kosong atau belum disahkan. Jika
+                  terdapat ketidaksesuaian, segera hubungi bagian Akademik.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer Section -->
+    <footer
+      class="main-content bg-background border-t border-divider-gray right-0 header-wrapper py-base-16 mt-auto"
+    >
+      <div class="flex justify-between items-center px-section-gap w-full">
+        <p class="font-metadata text-metadata text-text-muted">
+          © 2024 Universitas Maju. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <a
+            class="font-metadata text-metadata text-text-muted hover:text-primary transition-colors"
+            href="#"
+            >Sistem Informasi Akademik v1.0.0</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="nilai.js"></script>
+  </body>
+</html>

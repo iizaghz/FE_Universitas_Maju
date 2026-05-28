@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KRS - Universitas Maju</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- SideNavBar -->
+    <!-- Sidebar Navigation -->
+    <aside
+      class="fixed left-0 top-0 h-full sidebar z-50 bg-gradient-to-b from-sidebar-gradient-start to-sidebar-gradient-end shadow-lg flex flex-col p-base-16 gap-base-8 text-white"
+    >
+      <div class="flex items-center gap-base-12 mb-base-24">
+        <div
+          class="w-[46px] h-[46px] shrink-0 bg-white rounded-xl flex items-center justify-center shadow-sm card-hover"
+        >
+          <span
+            class="material-symbols-outlined text-blue-600 text-[32px]"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >school</span
+          >
+        </div>
+        <div class="flex flex-col justify-center logo-text-container">
+          <h1 class="font-page-title text-[18px] font-bold leading-none mb-1">
+            Universitas Maju
+          </h1>
+          <p class="text-[9.5px] opacity-80 uppercase tracking-widest leading-snug">
+            Unggul • Inovatif • Berintegritas
+          </p>
+        </div>
+      </div>
+      <nav
+        class="flex flex-col gap-1 overflow-y-auto flex-grow custom-scrollbar"
+      >
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="dashboard"
+        >
+          <span class="material-symbols-outlined">dashboard</span> Dashboard
+        </a>
+        <div class="relative">
+          <button
+            class="dropdown-btn w-full flex items-center justify-between px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+            data-group="akademik"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined">school</span> Akademik
+            </div>
+            <span
+              class="material-symbols-outlined text-sm dropdown-icon transition-transform"
+              >keyboard_arrow_down</span
+            >
+          </button>
+          <div class="dropdown-content pl-12 flex flex-col gap-1 mt-1 hidden">
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="jadwal_kuliah_universitas_maju.html"
+              data-page="jadwal_kuliah"
+              >Jadwal Kuliah</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="krs_refined_universitas_maju.html"
+              data-page="krs_refined"
+              >KRS</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="nilai_universitas_maju.html#transkrip"
+              data-page="nilai_transkrip"
+              >Transkrip Nilai</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="kurikulum_universitas_maju.html"
+              data-page="kurikulum"
+              >Kurikulum</a
+            >
+          </div>
+        </div>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="pengumuman"
+        >
+          <span class="material-symbols-outlined">campaign</span> Pengumuman
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="agenda_universitas_maju.html"
+          data-page="agenda"
+        >
+          <span class="material-symbols-outlined">event</span> Agenda
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="notifikasi_universitas_maju.html"
+          data-page="notifikasi"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          Notifikasi
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="profil_pengguna_universitas_maju.html"
+          data-page="profil_pengguna"
+        >
+          <span class="material-symbols-outlined">person</span> Profil
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="help_bantuan_universitas_maju.html"
+          data-page="help_bantuan"
+        >
+          <span class="material-symbols-outlined">help</span> Bantuan
+        </a>
+      </nav>
+      <div class="pt-base-16 mt-auto">
+        <a
+          class="flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="login_universitas_maju.html"
+        >
+          <span class="material-symbols-outlined">logout</span> Keluar
+        </a>
+      </div>
+    </aside>
+
+    <!-- Content Area -->
+    <main class="main-content flex-1 flex flex-col">
+      <!-- TopNavBar -->
+      <header
+        class="h-[80px] bg-white border-b border-divider-gray flex items-center justify-between px-8 sticky top-0 z-40"
+      >
+        <div class="flex items-center gap-4 w-1/3">
+          <button id="sidebar-toggle-btn" class="p-2 hover:bg-black/5 rounded-full transition-colors flex items-center justify-center text-text-muted hover:text-primary shrink-0">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          
+          <div class="relative w-full max-w-[400px]">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted"
+              >search</span
+            >
+            <input
+              class="w-full bg-[#f1f4f9] border-none rounded-xl py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary/20"
+              placeholder="Cari menu, informasi, dll..."
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="flex items-center gap-8">
+          <div class="relative">
+            <span
+              class="material-symbols-outlined text-on-surface-variant cursor-pointer"
+              >notifications</span
+            >
+            <span
+              class="absolute -top-1 -right-1 w-4 h-4 bg-error text-white text-[10px] rounded-full flex items-center justify-center font-bold"
+              >3</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-3 pl-6 border-l border-divider-gray"
+          >
+            <div class="text-right">
+              <p class="font-label text-label text-primary">Andi Pratama</p>
+              <p class="text-[12px] text-text-muted">Mahasiswa</p>
+            </div>
+            <img
+              alt="Andi Pratama"
+              class="w-10 h-10 rounded-full border-2 border-primary/10"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPCnV3pJ3ACTZodhW1dX5iRo-H-PSV3Y0bTNefKVlw0zXlfZ1YuTm3UvVxHwhzneoKQsdin7JmG6_v9ZJ6Y8ScdAwNTrANSZ-ahzBBpIMU3SC3b4Y_pbxEYT5Ria06X6m56Um7P1OwW1MxOT_p_s1pybdPbE1SA80ZBda5MX0CbFhmP0KkKYqSwlbNn8_D3f4EioZJV-HnKtj03ohjakXM5cD8LmOxNKr5a70ZZ2gTZccQs4wcm_RwrtfhRxbFnH-G0bnO9CT4MHAw"
+            />
+            <span
+              class="material-symbols-outlined text-text-muted cursor-pointer"
+              >expand_more</span
+            >
+          </div>
+        </div>
+      </header>
+      <!-- Main Content Canvas -->
+      <div class="p-8 flex flex-col gap-6">
+        <!-- Breadcrumbs and Header -->
+        <div class="flex justify-between items-start">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-2 text-xs text-text-muted mb-1">
+              <span>Akademik</span>
+              <span class="material-symbols-outlined text-[14px]"
+                >chevron_right</span
+              >
+              <span class="text-primary font-medium">KRS</span>
+            </div>
+            <h1 class="text-[36px] font-bold text-primary leading-tight">
+              KRS
+            </h1>
+            <p class="text-text-muted text-sm">
+              Kartu Rencana Studi Semester Genap 2023/2024
+            </p>
+          </div>
+          <button
+            class="flex items-center gap-2 px-4 py-2 border border-primary text-primary rounded-lg font-medium hover:bg-primary/5 transition-colors"
+          >
+            <span class="material-symbols-outlined">menu_book</span>
+            <span class="text-sm">Panduan KRS</span>
+          </button>
+        </div>
+        <!-- Top Grid: Stepper & Summary -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- Stepper Card (~58%) -->
+          <div
+            class="col-span-12 lg:col-span-7 bg-white p-6 rounded-2xl shadow-sm border border-border-gray card-hover"
+          >
+            <div class="flex items-center gap-2 mb-8">
+              <h3 class="text-[18px] font-semibold text-primary">
+                Status Pengambilan KRS
+              </h3>
+              <span
+                class="px-2 py-0.5 bg-status-success-bg text-status-success-text text-[11px] font-bold rounded-full uppercase tracking-wider"
+                >Dibuka</span
+              >
+            </div>
+            <div class="relative flex items-center justify-between mb-8 px-8">
+              <!-- Connector Line -->
+              <div
+                class="absolute top-4 left-16 right-16 h-[2px] bg-divider-gray"
+              >
+                <div class="w-1/3 h-full bg-primary"></div>
+              </div>
+              <!-- Step 1 (Active) -->
+              <div class="flex flex-col items-center gap-3 z-10 relative">
+                <div
+                  class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md"
+                >
+                  1
+                </div>
+                <div class="text-center absolute top-10 whitespace-nowrap">
+                  <p class="text-primary font-bold text-xs">Pengisian KRS</p>
+                  <p class="text-[10px] text-text-muted">1 - 10 Mei 2024</p>
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div class="flex flex-col items-center gap-3 z-10 relative">
+                <div
+                  class="w-8 h-8 rounded-full bg-[#f8fafc] border-2 border-divider-gray text-text-muted flex items-center justify-center font-bold text-sm"
+                >
+                  2
+                </div>
+                <div class="text-center absolute top-10 whitespace-nowrap">
+                  <p class="text-text-muted font-medium text-xs">
+                    Verifikasi DPA
+                  </p>
+                  <p class="text-[10px] text-text-muted">11 - 12 Mei 2024</p>
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div class="flex flex-col items-center gap-3 z-10 relative">
+                <div
+                  class="w-8 h-8 rounded-full bg-[#f8fafc] border-2 border-divider-gray text-text-muted flex items-center justify-center font-bold text-sm"
+                >
+                  3
+                </div>
+                <div class="text-center absolute top-10 whitespace-nowrap">
+                  <p class="text-text-muted font-medium text-xs">Persetujuan</p>
+                  <p class="text-[10px] text-text-muted">13 - 14 Mei 2024</p>
+                </div>
+              </div>
+              <!-- Step 4 -->
+              <div class="flex flex-col items-center gap-3 z-10 relative">
+                <div
+                  class="w-8 h-8 rounded-full bg-[#f8fafc] border-2 border-divider-gray text-text-muted flex items-center justify-center font-bold text-sm"
+                >
+                  4
+                </div>
+                <div class="text-center absolute top-10 whitespace-nowrap">
+                  <p class="text-text-muted font-medium text-xs">Selesai</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="mt-12 bg-status-success-bg/30 p-2.5 rounded-lg flex items-center gap-3 text-status-success-text text-[13px]"
+            >
+              <span class="material-symbols-outlined text-[18px] fill-current"
+                >check_circle</span
+              >
+              <span
+                >Anda dapat mengisi KRS hingga 10 Mei 2024 pukul 23:59
+                WIB.</span
+              >
+            </div>
+          </div>
+          <!-- Summary & Status Cards (~42%) -->
+          <div class="col-span-12 lg:col-span-5 grid grid-cols-2 gap-6">
+            <!-- Ringkasan KRS -->
+            <div
+              class="bg-white p-5 rounded-2xl shadow-sm border border-border-gray flex flex-col card-hover"
+            >
+              <h3 class="text-base font-bold text-primary mb-4">
+                Ringkasan KRS
+              </h3>
+              <div class="flex flex-col gap-3">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-text-secondary">Total SKS Maksimal</span>
+                  <span class="text-sm font-bold text-primary">24 SKS</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-text-secondary">Total SKS Diambil</span>
+                  <span class="text-sm font-bold text-primary">18 SKS</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-sm text-text-secondary">Total Mata Kuliah</span>
+                  <span class="text-sm font-bold text-primary">6</span>
+                </div>
+              </div>
+              <div class="mt-4 pt-2">
+                <p class="text-xs text-text-muted mb-2">Status</p>
+                <span
+                  class="inline-block px-3 py-1 bg-status-warning-bg/30 text-status-warning-text text-xs font-bold rounded-full"
+                  >Belum Disetujui DPA</span
+                >
+              </div>
+            </div>
+            <!-- Kartu Rencana Studi -->
+            <div
+              class="bg-white p-4 rounded-2xl shadow-sm border border-border-gray flex flex-col card-hover"
+            >
+              <h3 class="text-[14px] font-semibold text-primary mb-2">
+                Kartu Rencana Studi
+              </h3>
+              <div
+                class="flex-1 flex flex-col items-center justify-center text-center py-2"
+              >
+                <p class="text-[11px] text-text-muted mb-4">
+                  Anda belum menyimpan KRS.
+                </p>
+                <div class="w-full space-y-2">
+                  <button
+                    class="w-full py-2 bg-primary text-white rounded-lg font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-primary-container transition-all"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[16px] fill-current"
+                      >save</span
+                    >
+                    Simpan KRS
+                  </button>
+                  <button
+                    class="w-full py-2 border border-divider-gray text-status-danger-text rounded-lg font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-status-danger-bg transition-all"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >delete</span
+                    >
+                    Batal / Hapus KRS
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Grid: Tables Section -->
+        <div class="grid grid-cols-12 gap-6 items-start">
+          <!-- Left: Daftar Mata Kuliah -->
+          <div
+            class="col-span-12 lg:col-span-8 bg-white rounded-2xl shadow-sm border border-border-gray overflow-hidden card-hover"
+          >
+            <div
+              class="p-4 lg:p-5 border-b border-divider-gray flex flex-col xl:flex-row xl:items-center justify-between gap-3"
+            >
+              <h3 class="text-lg font-bold text-primary whitespace-nowrap">
+                Daftar Mata Kuliah
+              </h3>
+              <div class="flex items-center gap-2 overflow-x-auto pb-1 xl:pb-0 scrollbar-hide">
+                <div class="relative flex-shrink-0">
+                  <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted text-[18px]"
+                    >search</span
+                  >
+                  <input
+                    class="h-9 bg-surface-container-low border border-transparent rounded-lg pl-9 pr-3 text-xs text-text-primary w-[160px] xl:w-[200px] focus:ring-1 focus:ring-primary focus:border-primary outline-none transition-all"
+                    placeholder="Cari mata kuliah..."
+                    type="text"
+                  />
+                </div>
+                <select
+                  class="h-9 bg-surface-container-low border border-transparent rounded-lg px-2 xl:px-3 text-xs text-text-primary focus:ring-1 focus:ring-primary focus:border-primary outline-none cursor-pointer transition-all flex-shrink-0"
+                >
+                  <option>Semua Kelas</option>
+                </select>
+                <select
+                  class="h-9 bg-surface-container-low border border-transparent rounded-lg px-2 xl:px-3 text-xs text-text-primary focus:ring-1 focus:ring-primary focus:border-primary outline-none cursor-pointer transition-all flex-shrink-0"
+                >
+                  <option>Semua</option>
+                </select>
+                <button
+                  class="h-9 px-3 xl:px-4 bg-primary text-white rounded-lg text-xs font-bold flex items-center gap-1.5 hover:bg-primary-container transition-all shadow-sm flex-shrink-0"
+                >
+                  <span class="material-symbols-outlined text-[16px] font-bold">add</span>
+                  Tambah Mata Kuliah
+                </button>
+              </div>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left table-dense">
+                <thead class="bg-[#F8FAFC]">
+                  <tr
+                    class="text-text-secondary font-semibold text-[12px] border-b border-divider-gray"
+                  >
+                    <th class="px-4 py-3">Kode MK</th>
+                    <th class="px-4 py-3">Nama Mata Kuliah</th>
+                    <th class="px-4 py-3">Kelas</th>
+                    <th class="px-4 py-3 text-center">SKS</th>
+                    <th class="px-4 py-3 text-center">Semester</th>
+                    <th class="px-4 py-3">Prasyarat</th>
+                    <th class="px-4 py-3 text-center">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-divider-gray text-[13px]">
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF101</td>
+                    <td class="px-4 font-medium">Algoritma dan Pemrograman</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">2</td>
+                    <td class="px-4">-</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-success-bg text-status-success-text rounded flex items-center justify-center mx-auto hover:bg-status-success-text hover:text-white transition-all"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[16px] font-bold"
+                          >add</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF102</td>
+                    <td class="px-4 font-medium">Struktur Data</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">2</td>
+                    <td class="px-4">IF101</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-success-bg text-status-success-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[16px] font-bold"
+                          >add</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF103</td>
+                    <td class="px-4 font-medium">Basis Data</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">2</td>
+                    <td class="px-4">-</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-success-bg text-status-success-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[16px] font-bold"
+                          >add</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF104</td>
+                    <td class="px-4 font-medium">Sistem Operasi</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">2</td>
+                    <td class="px-4">-</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-success-bg text-status-success-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[16px] font-bold"
+                          >add</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF105</td>
+                    <td class="px-4 font-medium">Jaringan Komputer</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">3</td>
+                    <td class="px-4">-</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-success-bg text-status-success-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[16px] font-bold"
+                          >add</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF106</td>
+                    <td class="px-4 font-medium">Rekayasa Perangkat Lunak</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">4</td>
+                    <td class="px-4">IF102</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-success-bg text-status-success-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[16px] font-bold"
+                          >add</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF107</td>
+                    <td class="px-4 font-medium">Kecerdasan Buatan</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">5</td>
+                    <td class="px-4">IF102</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-success-bg text-status-success-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[16px] font-bold"
+                          >add</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">UM101</td>
+                    <td class="px-4 font-medium">Pendidikan Pancasila</td>
+                    <td class="px-4">UM-21A</td>
+                    <td class="px-4 text-center font-bold">2</td>
+                    <td class="px-4 text-center">1</td>
+                    <td class="px-4">-</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-success-bg text-status-success-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span
+                          class="material-symbols-outlined text-[16px] font-bold"
+                          >add</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="p-3 border-t border-divider-gray flex items-center justify-between"
+            >
+              <span class="text-[11px] text-text-muted"
+                >Menampilkan 1 - 8 dari 32 data</span
+              >
+              <div class="flex items-center gap-1">
+                <button
+                  class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container text-text-muted"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >chevron_left</span
+                  >
+                </button>
+                <button
+                  class="w-7 h-7 flex items-center justify-center rounded bg-primary text-white font-bold text-xs"
+                >
+                  1
+                </button>
+                <button
+                  class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container text-xs"
+                >
+                  2
+                </button>
+                <button
+                  class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container text-xs"
+                >
+                  3
+                </button>
+                <button
+                  class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container text-xs"
+                >
+                  4
+                </button>
+                <button
+                  class="w-7 h-7 flex items-center justify-center rounded hover:bg-surface-container text-text-muted"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >chevron_right</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Right: Mata Kuliah yang Diambil -->
+          <div
+            class="col-span-12 lg:col-span-4 bg-white rounded-2xl shadow-sm border border-border-gray overflow-hidden flex flex-col card-hover"
+          >
+            <div
+              class="p-4 border-b border-divider-gray flex items-center justify-between"
+            >
+              <h3 class="text-[14px] font-semibold text-primary">
+                Mata Kuliah yang Diambil (6)
+              </h3>
+              <button
+                class="px-3 py-1 bg-status-danger-bg text-status-danger-text text-[11px] font-bold rounded-lg flex items-center gap-1.5 hover:bg-error hover:text-white transition-all"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >delete</span
+                >
+                Hapus Semua
+              </button>
+            </div>
+            <div class="overflow-x-auto flex-1">
+              <table class="w-full text-left table-dense">
+                <thead class="bg-[#F8FAFC]">
+                  <tr
+                    class="text-text-secondary font-semibold text-[11px] border-b border-divider-gray uppercase tracking-wider"
+                  >
+                    <th class="px-4 py-3">Kode MK</th>
+                    <th class="px-4 py-3">Nama Mata Kuliah</th>
+                    <th class="px-4 py-3">Kelas</th>
+                    <th class="px-4 py-3 text-center">SKS</th>
+                    <th class="px-4 py-3 text-center">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-divider-gray text-[13px]">
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF101</td>
+                    <td class="px-4 font-medium">Algoritma dan Pemrograman</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-danger-bg text-status-danger-text rounded flex items-center justify-center mx-auto hover:bg-error hover:text-white transition-all"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >delete</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF102</td>
+                    <td class="px-4 font-medium">Struktur Data</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-danger-bg text-status-danger-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >delete</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF103</td>
+                    <td class="px-4 font-medium">Basis Data</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-danger-bg text-status-danger-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >delete</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">IF104</td>
+                    <td class="px-4 font-medium">Sistem Operasi</td>
+                    <td class="px-4">SI-21A</td>
+                    <td class="px-4 text-center font-bold">3</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-danger-bg text-status-danger-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >delete</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">UM101</td>
+                    <td class="px-4 font-medium">Pendidikan Pancasila</td>
+                    <td class="px-4">UM-21A</td>
+                    <td class="px-4 text-center font-bold">2</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-danger-bg text-status-danger-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >delete</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-light-blue-bg/30">
+                    <td class="px-4">UM102</td>
+                    <td class="px-4 font-medium">Bahasa Indonesia</td>
+                    <td class="px-4">UM-21A</td>
+                    <td class="px-4 text-center font-bold">2</td>
+                    <td class="px-4 text-center">
+                      <button
+                        class="w-6 h-6 bg-status-danger-bg text-status-danger-text rounded flex items-center justify-center mx-auto"
+                      >
+                        <span class="material-symbols-outlined text-[14px]"
+                          >delete</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              class="p-4 border-t border-divider-gray bg-[#F8FAFC] flex items-center justify-between"
+            >
+              <span class="font-bold text-primary">Total</span>
+              <span class="text-lg font-extrabold text-primary">18 SKS</span>
+            </div>
+          </div>
+        </div>
+        <!-- Warning Notice -->
+        <div
+          class="bg-status-info-bg/20 p-3 rounded-lg flex items-center gap-3 border border-status-info-bg"
+        >
+          <div
+            class="w-8 h-8 rounded-full bg-status-info-bg flex items-center justify-center shrink-0"
+          >
+            <span
+              class="material-symbols-outlined text-status-info-text text-[20px]"
+              >info</span
+            >
+          </div>
+          <p class="text-[13px] text-primary">
+            <span class="font-bold">Penting:</span> Pastikan Mata Kuliah yang
+            diambil sesuai dengan Kurikulum dan Prasyarat yang berlaku. Jika
+            Anda mengalami kesulitan, silakan hubungi DPA Anda.
+          </p>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer
+        class="w-full py-4 mt-auto border-t border-divider-gray flex justify-between items-center px-8 bg-white"
+      >
+        <p class="text-text-muted text-[11px]">
+          © 2024 Universitas Maju. All rights reserved.
+        </p>
+        <div class="flex items-center gap-4">
+          <span class="text-[11px] text-text-muted"
+            >Sistem Informasi Akademik v1.0.0</span
+          >
+        </div>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="krs.js"></script>
+  </body>
+</html>

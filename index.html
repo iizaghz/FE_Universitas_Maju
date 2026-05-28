@@ -1,0 +1,244 @@
+<!doctype html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login | Universitas Maju - Sistem Informasi Akademik</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="bg-background font-body text-on-surface overflow-hidden">
+    <main class="flex min-h-screen w-full relative">
+      <!-- Left Side: Visual Branding & Hero -->
+      <section
+        class="hidden lg:flex w-7/12 relative overflow-hidden campus-mask bg-sidebar-gradient-start items-end"
+      >
+        <img
+          alt="Universitas Maju Campus"
+          class="absolute w-full h-full object-cover opacity-80 inset-x-0 bottom-0 top-0 object-bottom"
+          data-alt="A sprawling, high-resolution view of a modern university campus featuring clean architectural lines and expansive glass windows. The building is surrounded by lush green lawns and well-manicured pathways under a bright, clear blue sky. The lighting is crisp and airy, emphasizing the institutional authority and professional academic atmosphere of Universitas Maju. The overall style is clean, modern, and prestigious."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8bCdgdpvthDRnjDzDHH9An2OL8OSmO7fwLFPe0FBImZvpieUeb8ppM2trbdWdjn88dNBmJyEMK8KyuoT0BlAyCFyk3T5HjyRBKSD9ONwce_mnf8mZqnv0sQDqxcq9csDafvcwelfi6Yk7_SxqKm6ZgEO9BziUXiynSvrpqM4unVbpQWpSbepF3TcVmG0wKnT8oKej9TreQ-M_SBrjTMtIpPZEJKJiB4WCmxG7bMzDfyZVpEJW5wVPm_92u6DZATssjWzuppv9KN17"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-sidebar-gradient-start/40 to-transparent"
+        ></div>
+        <!-- Branding Overlay -->
+        <div
+          class="relative z-10 p-base-32 flex flex-col items-start gap-base-16"
+        >
+          <div class="flex items-center gap-base-12">
+            <div
+              class="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg p-2"
+            >
+              <span
+                class="material-symbols-outlined text-primary text-4xl"
+                data-icon="school"
+                >school</span
+              >
+            </div>
+            <div>
+              <h1
+                class="font-page-title text-page-title text-white tracking-tight leading-none"
+              >
+                Universitas Maju
+              </h1>
+              <p class="font-label text-label text-white/90 mt-1">
+                Unggul • Inovatif • Berintegritas
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Decorative Elements -->
+        <div class="absolute bottom-base-32 left-base-32 opacity-20">
+          <div class="grid grid-cols-6 gap-2">
+            <!-- Dot pattern simulation -->
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+            <div class="w-1 h-1 bg-white rounded-full"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Right Side: Login Canvas -->
+      <section
+        class="w-full lg:w-5/12 flex items-center justify-center p-base-24 bg-login-gradient relative"
+      >
+        <!-- Floating Background Decoration (Small Screen) -->
+        <div class="lg:hidden absolute top-12 left-12 opacity-10">
+          <span
+            class="material-symbols-outlined text-primary text-6xl"
+            data-icon="school"
+            >school</span
+          >
+        </div>
+        <!-- Login Card -->
+        <div
+          class="w-full max-w-[480px] bg-surface-container-lowest rounded-[16px] shadow-sm border border-divider-gray p-10 flex flex-col gap-base-32 animate-fade-in relative z-10"
+        >
+          <!-- Header -->
+          <div class="text-center">
+            <h2 class="font-page-title text-page-title text-on-surface mb-2">
+              Login
+            </h2>
+            <p class="font-body text-body text-text-secondary">
+              Silakan masuk untuk melanjutkan ke sistem
+            </p>
+          </div>
+          <!-- Form -->
+          <form class="flex flex-col gap-base-24" id="loginForm">
+            <!-- Username -->
+            <div class="flex flex-col gap-base-8">
+              <label
+                class="font-label text-label text-on-surface"
+                for="username"
+                >Username / Email</label
+              >
+              <div class="relative group">
+                <span
+                  class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-muted group-focus-within:text-primary transition-colors"
+                  data-icon="person"
+                  >person</span
+                >
+                <input
+                  class="w-full h-[44px] pl-12 pr-4 bg-white border border-border-gray rounded-[10px] focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body text-body placeholder:text-text-muted"
+                  id="username"
+                  name="username"
+                  placeholder="Masukkan username atau email Anda"
+                  required=""
+                  type="text"
+                />
+              </div>
+            </div>
+            <!-- Password -->
+            <div class="flex flex-col gap-base-8">
+              <div class="flex justify-between items-center">
+                <label
+                  class="font-label text-label text-on-surface"
+                  for="password"
+                  >Password</label
+                >
+              </div>
+              <div class="relative group">
+                <span
+                  class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-muted group-focus-within:text-primary transition-colors"
+                  data-icon="lock"
+                  >lock</span
+                >
+                <input
+                  class="w-full h-[44px] pl-12 pr-12 bg-white border border-border-gray rounded-[10px] focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-body text-body placeholder:text-text-muted"
+                  id="password"
+                  name="password"
+                  placeholder="Masukkan password Anda"
+                  required=""
+                  type="password"
+                />
+                <button
+                  class="absolute right-4 top-1/2 -translate-y-1/2 text-text-muted hover:text-on-surface-variant transition-colors"
+                  onclick="togglePassword()"
+                  type="button"
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    data-icon="visibility"
+                    id="passwordToggle"
+                    >visibility</span
+                  >
+                </button>
+              </div>
+              <div class="flex justify-end mt-1">
+                <a
+                  class="font-metadata text-metadata text-primary hover:underline transition-all"
+                  href="#"
+                  >Lupa password?</a
+                >
+              </div>
+            </div>
+            <!-- Submit Button -->
+            <button
+              class="w-full h-[44px] bg-primary-container text-white font-label text-label rounded-[10px] shadow-md hover:bg-primary transition-all active:scale-[0.98] flex items-center justify-center gap-base-8"
+              type="submit"
+              
+            >
+              Login
+            </button>
+          </form>
+          <!-- Divider -->
+          <div class="flex items-center gap-base-16">
+            <div class="flex-grow h-[1px] bg-divider-gray"></div>
+            <span
+              class="font-metadata text-metadata text-text-muted uppercase tracking-wider"
+              >atau</span
+            >
+            <div class="flex-grow h-[1px] bg-divider-gray"></div>
+          </div>
+          <!-- Secondary Login / Alternative -->
+          <div class="flex flex-col items-center gap-base-16">
+            <p class="font-metadata text-metadata text-text-secondary">
+              Belum memiliki akun? Hubungi
+              <span class="text-primary font-semibold">Administrator</span>
+            </p>
+          </div>
+        </div>
+        <!-- Footer Small Screen Only -->
+        <div class="absolute bottom-6 left-0 right-0 text-center lg:hidden">
+          <p class="font-metadata text-metadata text-text-muted">
+            © 2024 Universitas Maju
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- Overlay Decoration: Grid dots -->
+    <div
+      class="hidden lg:block absolute top-12 right-12 opacity-10 pointer-events-none"
+    >
+      <div class="grid grid-cols-4 gap-4">
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+        <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

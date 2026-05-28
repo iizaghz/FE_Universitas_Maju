@@ -1,0 +1,779 @@
+<!doctype html>
+<html class="light" lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Help / Bantuan - Universitas Maju</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="bg-background font-body text-text-primary antialiased">
+    <!-- SideNavBar -->
+    <!-- Sidebar Navigation -->
+    <aside
+      class="fixed left-0 top-0 h-full sidebar z-50 bg-gradient-to-b from-sidebar-gradient-start to-sidebar-gradient-end shadow-lg flex flex-col p-base-16 gap-base-8 text-white"
+    >
+      <div class="flex items-center gap-base-12 mb-base-24">
+        <div
+          class="w-[46px] h-[46px] shrink-0 bg-white rounded-xl flex items-center justify-center shadow-sm card-hover"
+        >
+          <span
+            class="material-symbols-outlined text-blue-600 text-[32px]"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >school</span
+          >
+        </div>
+        <div class="flex flex-col justify-center logo-text-container">
+          <h1 class="font-page-title text-[18px] font-bold leading-none mb-1">
+            Universitas Maju
+          </h1>
+          <p class="text-[9.5px] opacity-80 uppercase tracking-widest leading-snug">
+            Unggul • Inovatif • Berintegritas
+          </p>
+        </div>
+      </div>
+      <nav
+        class="flex flex-col gap-1 overflow-y-auto flex-grow custom-scrollbar"
+      >
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="dashboard"
+        >
+          <span class="material-symbols-outlined">dashboard</span> Dashboard
+        </a>
+        <div class="relative">
+          <button
+            class="dropdown-btn w-full flex items-center justify-between px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+            data-group="akademik"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined">school</span> Akademik
+            </div>
+            <span
+              class="material-symbols-outlined text-sm dropdown-icon transition-transform"
+              >keyboard_arrow_down</span
+            >
+          </button>
+          <div class="dropdown-content pl-12 flex flex-col gap-1 mt-1 hidden">
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="jadwal_kuliah_universitas_maju.html"
+              data-page="jadwal_kuliah"
+              >Jadwal Kuliah</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="krs_refined_universitas_maju.html"
+              data-page="krs_refined"
+              >KRS</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="nilai_universitas_maju.html#transkrip"
+              data-page="nilai_transkrip"
+              >Transkrip Nilai</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="kurikulum_universitas_maju.html"
+              data-page="kurikulum"
+              >Kurikulum</a
+            >
+          </div>
+        </div>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="pengumuman"
+        >
+          <span class="material-symbols-outlined">campaign</span> Pengumuman
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="agenda_universitas_maju.html"
+          data-page="agenda"
+        >
+          <span class="material-symbols-outlined">event</span> Agenda
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="notifikasi_universitas_maju.html"
+          data-page="notifikasi"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          Notifikasi
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="profil_pengguna_universitas_maju.html"
+          data-page="profil_pengguna"
+        >
+          <span class="material-symbols-outlined">person</span> Profil
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="help_bantuan_universitas_maju.html"
+          data-page="help_bantuan"
+        >
+          <span class="material-symbols-outlined">help</span> Bantuan
+        </a>
+      </nav>
+      <div class="pt-base-16 mt-auto">
+        <a
+          class="flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="login_universitas_maju.html"
+        >
+          <span class="material-symbols-outlined">logout</span> Keluar
+        </a>
+      </div>
+    </aside>
+
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 right-0 right-0 header-wrapper h-[80px] z-40 bg-surface-container-lowest border-b border-divider-gray flex items-center justify-between px-base-32"
+    >
+      <div class="flex items-center flex-1 max-w-2xl">
+          <button id="sidebar-toggle-btn" class="p-2 hover:bg-black/5 rounded-full transition-colors flex items-center justify-center text-text-muted hover:text-primary shrink-0">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+          
+        <div class="relative w-full">
+          <span
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-text-muted"
+            >search</span
+          >
+          <input
+            class="w-full h-11 pl-12 pr-4 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/20 font-body text-body"
+            placeholder="Cari bantuan, topik, atau kata kunci..."
+            type="text"
+          />
+        </div>
+      </div>
+      <div class="flex items-center gap-base-24">
+        <button
+          class="relative w-10 h-10 flex items-center justify-center text-text-secondary hover:bg-surface-container-low rounded-full transition-colors"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          <span
+            class="absolute top-2 right-2 w-4 h-4 bg-error text-white text-[10px] font-bold rounded-full flex items-center justify-center"
+            >3</span
+          >
+        </button>
+        <div
+          class="flex items-center gap-3 pl-base-12 border-l border-divider-gray"
+        >
+          <div class="text-right">
+            <p class="font-label text-label text-text-primary">Andi Pratama</p>
+            <p class="text-[12px] text-text-secondary">Mahasiswa</p>
+          </div>
+          <img
+            alt="Andi Pratama"
+            class="w-10 h-10 rounded-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5L1OZosF_nBmdFHzPzKGgNkAmFzrnsuR3_6aJrxsq20yCDCffNj0_292xYT2YIOAKL_SyCPvTuqJC8K5_Qeei4uQirLhgpuqHhxKoC9iIPgbhAOAduRQFaQ8bM2lt3vIw1Ii98KGpPvcdmQfbWbSjHAbZzcCHypDbtRCu1WDViq5bYtCKBZfOvkRhzPkMsKKjIktzrP71bLaUgRW2FjOIJh5gZ1XmpRakIpOHgoDNH-KMT2EiJObOc4dlOqliR40wa-Wogp9SYxuL"
+          />
+          <span class="material-symbols-outlined text-text-secondary"
+            >keyboard_arrow_down</span
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="main-content pt-[112px] p-base-32 min-h-screen">
+      <!-- Breadcrumb & Title -->
+      <div class="mb-base-32">
+        <nav class="flex text-metadata text-text-muted mb-2">
+          <span>Help</span>
+          <span class="mx-2">/</span>
+          <span class="text-primary font-semibold">Bantuan</span>
+        </nav>
+        <h2 class="font-page-title text-page-title text-text-primary mb-2">
+          Help / Bantuan
+        </h2>
+        <p class="text-text-secondary">
+          Temukan jawaban, panduan, dan hubungi kami jika Anda membutuhkan
+          bantuan.
+        </p>
+      </div>
+      <!-- Help Categories -->
+      <div class="mb-base-32">
+        <h3 class="font-section-title text-[18px] text-text-primary mb-base-16">
+          Topik Bantuan
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-base-16">
+          <!-- Academic -->
+          <div
+            class="bg-surface-container-lowest p-base-24 rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all group border border-divider-gray"
+          >
+            <div
+              class="w-12 h-12 bg-light-blue-bg rounded-xl flex items-center justify-center mb-base-16"
+            >
+              <span class="material-symbols-outlined text-primary text-[24px]"
+                >school</span
+              >
+            </div>
+            <h4 class="font-card-title text-card-title mb-2">Akademik</h4>
+            <p class="text-[13px] text-text-secondary leading-relaxed mb-4">
+              Informasi seputar perkuliahan, KRS, jadwal, nilai, dan KHS.
+            </p>
+            <a
+              class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+              href="#"
+            >
+              Lihat Topik
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <!-- Finance -->
+          <div
+            class="bg-surface-container-lowest p-base-24 rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all group border border-divider-gray"
+          >
+            <div
+              class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center mb-base-16"
+            >
+              <span class="material-symbols-outlined text-green-600 text-[24px]"
+                >payments</span
+              >
+            </div>
+            <h4 class="font-card-title text-card-title mb-2">Keuangan</h4>
+            <p class="text-[13px] text-text-secondary leading-relaxed mb-4">
+              Pembayaran UKT, tagihan, bukti pembayaran, dan lainnya.
+            </p>
+            <a
+              class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+              href="#"
+            >
+              Lihat Topik
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <!-- Services -->
+          <div
+            class="bg-surface-container-lowest p-base-24 rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all group border border-divider-gray"
+          >
+            <div
+              class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center mb-base-16"
+            >
+              <span
+                class="material-symbols-outlined text-purple-600 text-[24px]"
+                >contact_support</span
+              >
+            </div>
+            <h4 class="font-card-title text-card-title mb-2">Layanan</h4>
+            <p class="text-[13px] text-text-secondary leading-relaxed mb-4">
+              Pengajuan surat, beasiswa, pengaduan, dan layanan lainnya.
+            </p>
+            <a
+              class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+              href="#"
+            >
+              Lihat Topik
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <!-- Account -->
+          <div
+            class="bg-surface-container-lowest p-base-24 rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all group border border-divider-gray"
+          >
+            <div
+              class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center mb-base-16"
+            >
+              <span
+                class="material-symbols-outlined text-orange-600 text-[24px]"
+                >account_circle</span
+              >
+            </div>
+            <h4 class="font-card-title text-card-title mb-2">
+              Akun &amp; Aplikasi
+            </h4>
+            <p class="text-[13px] text-text-secondary leading-relaxed mb-4">
+              Masalah akun, akses, dan penggunaan sistem informasi.
+            </p>
+            <a
+              class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+              href="#"
+            >
+              Lihat Topik
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <!-- Others -->
+          <div
+            class="bg-surface-container-lowest p-base-24 rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.06)] transition-all group border border-divider-gray"
+          >
+            <div
+              class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center mb-base-16"
+            >
+              <span class="material-symbols-outlined text-teal-600 text-[24px]"
+                >help_center</span
+              >
+            </div>
+            <h4 class="font-card-title text-card-title mb-2">Lainnya</h4>
+            <p class="text-[13px] text-text-secondary leading-relaxed mb-4">
+              Topik lainnya yang tidak termasuk dalam kategori di atas.
+            </p>
+            <a
+              class="text-primary font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all"
+              href="#"
+            >
+              Lihat Topik
+              <span class="material-symbols-outlined text-sm"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Two Column Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-base-32 mb-base-32">
+        <!-- Popular Articles & FAQ -->
+        <div class="lg:col-span-2 space-y-base-32">
+          <!-- Popular Articles -->
+          <div
+            class="bg-surface-container-lowest p-base-24 rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] border border-divider-gray"
+          >
+            <div class="flex items-center justify-between mb-base-16">
+              <h3 class="font-card-title text-card-title text-text-primary">
+                Artikel Bantuan Populer
+              </h3>
+              <a class="text-primary font-semibold text-sm" href="#"
+                >Lihat Semua Artikel</a
+              >
+            </div>
+            <div class="space-y-0">
+              <!-- Article Item -->
+              <a
+                class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-xl border-b border-divider-gray last:border-0 group"
+                href="krs_refined_universitas_maju.html"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-surface-container-low rounded-lg flex items-center justify-center text-text-muted"
+                  >
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div>
+                    <h5
+                      class="font-label text-label text-text-primary group-hover:text-primary"
+                    >
+                      Cara Mengisi KRS Online
+                    </h5>
+                    <p class="text-[12px] text-text-secondary">Akademik</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-text-muted">
+                  <span class="material-symbols-outlined text-sm"
+                    >visibility</span
+                  >
+                  <span class="text-[12px]">12.450</span>
+                </div>
+              </a>
+              <!-- Article Item -->
+              <a
+                class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-xl border-b border-divider-gray last:border-0 group"
+                href="keuangan_universitas_maju.html"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-surface-container-low rounded-lg flex items-center justify-center text-text-muted"
+                  >
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div>
+                    <h5
+                      class="font-label text-label text-text-primary group-hover:text-primary"
+                    >
+                      Pembayaran UKT dan Konfirmasi Pembayaran
+                    </h5>
+                    <p class="text-[12px] text-text-secondary">Keuangan</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-text-muted">
+                  <span class="material-symbols-outlined text-sm"
+                    >visibility</span
+                  >
+                  <span class="text-[12px]">9.876</span>
+                </div>
+              </a>
+              <!-- Article Item -->
+              <a
+                class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-xl border-b border-divider-gray last:border-0 group"
+                href="layanan_universitas_maju.html"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-surface-container-low rounded-lg flex items-center justify-center text-text-muted"
+                  >
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div>
+                    <h5
+                      class="font-label text-label text-text-primary group-hover:text-primary"
+                    >
+                      Cara Mengajukan Surat Keterangan Aktif Kuliah
+                    </h5>
+                    <p class="text-[12px] text-text-secondary">Layanan</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-text-muted">
+                  <span class="material-symbols-outlined text-sm"
+                    >visibility</span
+                  >
+                  <span class="text-[12px]">7.532</span>
+                </div>
+              </a>
+              <!-- Article Item -->
+              <a
+                class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-xl border-b border-divider-gray last:border-0 group"
+                href="nilai_universitas_maju.html"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-surface-container-low rounded-lg flex items-center justify-center text-text-muted"
+                  >
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div>
+                    <h5
+                      class="font-label text-label text-text-primary group-hover:text-primary"
+                    >
+                      Mengunduh Kartu Hasil Studi (KHS)
+                    </h5>
+                    <p class="text-[12px] text-text-secondary">Akademik</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-text-muted">
+                  <span class="material-symbols-outlined text-sm"
+                    >visibility</span
+                  >
+                  <span class="text-[12px]">6.211</span>
+                </div>
+              </a>
+              <!-- Article Item -->
+              <a
+                class="flex items-center justify-between p-4 hover:bg-surface-container-low transition-colors rounded-xl border-b border-divider-gray last:border-0 group"
+                href="#"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 bg-surface-container-low rounded-lg flex items-center justify-center text-text-muted"
+                  >
+                    <span class="material-symbols-outlined">description</span>
+                  </div>
+                  <div>
+                    <h5
+                      class="font-label text-label text-text-primary group-hover:text-primary"
+                    >
+                      Lupa Password Akun Mahasiswa
+                    </h5>
+                    <p class="text-[12px] text-text-secondary">
+                      Akun &amp; Aplikasi
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 text-text-muted">
+                  <span class="material-symbols-outlined text-sm"
+                    >visibility</span
+                  >
+                  <span class="text-[12px]">5.893</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- FAQ Section -->
+          <div
+            class="bg-surface-container-lowest p-base-24 rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] border border-divider-gray"
+          >
+            <div class="flex items-center justify-between mb-base-16">
+              <h3 class="font-card-title text-card-title text-text-primary">
+                FAQ (Pertanyaan Umum)
+              </h3>
+              <a class="text-primary font-semibold text-sm" href="#"
+                >Lihat Semua FAQ</a
+              >
+            </div>
+            <div class="space-y-4">
+              <details class="group">
+                <summary
+                  class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl cursor-pointer list-none"
+                >
+                  <span class="font-label text-label text-text-primary"
+                    >Bagaimana cara mengisi KRS?</span
+                  >
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="p-4 text-body text-text-secondary leading-relaxed">
+                  Anda dapat mengisi KRS melalui menu Akademik &gt; KRS.
+                  Pastikan Anda telah menyelesaikan pembayaran UKT semester ini
+                  dan berkonsultasi dengan dosen wali sebelum melakukan
+                  pengisian.
+                </div>
+              </details>
+              <details class="group">
+                <summary
+                  class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl cursor-pointer list-none"
+                >
+                  <span class="font-label text-label text-text-primary"
+                    >Kapan batas akhir pembayaran UKT?</span
+                  >
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="p-4 text-body text-text-secondary leading-relaxed">
+                  Batas akhir pembayaran UKT biasanya diinformasikan melalui
+                  kalender akademik atau menu pengumuman di portal mahasiswa.
+                </div>
+              </details>
+              <details class="group">
+                <summary
+                  class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl cursor-pointer list-none"
+                >
+                  <span class="font-label text-label text-text-primary"
+                    >Bagaimana cara mengajukan beasiswa?</span
+                  >
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="p-4 text-body text-text-secondary leading-relaxed">
+                  Pengajuan beasiswa dapat dilakukan melalui menu Layanan &gt;
+                  Beasiswa saat periode pendaftaran dibuka.
+                </div>
+              </details>
+              <details class="group">
+                <summary
+                  class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl cursor-pointer list-none"
+                >
+                  <span class="font-label text-label text-text-primary"
+                    >Di mana saya bisa melihat nilai dan KHS?</span
+                  >
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="p-4 text-body text-text-secondary leading-relaxed">
+                  Nilai per mata kuliah dan KHS (Kartu Hasil Studi) dapat
+                  diakses melalui menu Nilai pada sidebar navigasi.
+                </div>
+              </details>
+              <details class="group">
+                <summary
+                  class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl cursor-pointer list-none"
+                >
+                  <span class="font-label text-label text-text-primary"
+                    >Apa yang harus dilakukan jika lupa password?</span
+                  >
+                  <span
+                    class="material-symbols-outlined transition-transform group-open:rotate-180"
+                    >expand_more</span
+                  >
+                </summary>
+                <div class="p-4 text-body text-text-secondary leading-relaxed">
+                  Gunakan fitur "Lupa Password" pada halaman login atau hubungi
+                  Unit Sistem Informasi di gedung Rektorat.
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <!-- Support Sidebar -->
+        <div class="space-y-base-24">
+          <div
+            class="bg-surface-container-lowest p-base-24 rounded-2xl shadow-[0_1px_2px_rgba(0,0,0,0.04)] border border-divider-gray"
+          >
+            <h3 class="font-card-title text-card-title text-text-primary mb-2">
+              Hubungi Support
+            </h3>
+            <p class="text-[13px] text-text-secondary mb-base-24">
+              Tim kami siap membantu Anda.
+            </p>
+            <div class="space-y-base-24">
+              <!-- Live Chat -->
+              <div class="flex gap-4">
+                <div
+                  class="w-10 h-10 shrink-0 bg-blue-50 rounded-full flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-blue-600 text-[20px]"
+                    >chat</span
+                  >
+                </div>
+                <div>
+                  <h6 class="font-label text-label text-text-primary mb-1">
+                    Live Chat
+                  </h6>
+                  <p class="text-[12px] text-text-muted mb-2">
+                    Senin – Jumat, 08.00 – 16.00 WIB
+                  </p>
+                  <button
+                    class="px-4 py-1.5 bg-white border border-primary text-primary font-bold text-[12px] rounded-lg hover:bg-light-blue-bg transition-colors"
+                  >
+                    Mulai Chat
+                  </button>
+                </div>
+              </div>
+              <!-- Email -->
+              <div class="flex gap-4">
+                <div
+                  class="w-10 h-10 shrink-0 bg-green-50 rounded-full flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-green-600 text-[20px]"
+                    >mail</span
+                  >
+                </div>
+                <div>
+                  <h6 class="font-label text-label text-text-primary mb-1">
+                    Email Support
+                  </h6>
+                  <p class="text-[12px] text-text-muted mb-2">
+                    helpdesk@universitasmaju.ac.id
+                  </p>
+                  <button
+                    class="px-4 py-1.5 bg-white border border-primary text-primary font-bold text-[12px] rounded-lg hover:bg-light-blue-bg transition-colors"
+                  >
+                    Kirim Email
+                  </button>
+                </div>
+              </div>
+              <!-- Phone -->
+              <div class="flex gap-4">
+                <div
+                  class="w-10 h-10 shrink-0 bg-purple-50 rounded-full flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-purple-600 text-[20px]"
+                    >call</span
+                  >
+                </div>
+                <div>
+                  <h6 class="font-label text-label text-text-primary mb-1">
+                    Telepon
+                  </h6>
+                  <p class="text-[12px] text-text-muted mb-1">
+                    (021) 1234 5678
+                  </p>
+                  <p class="text-[12px] text-text-muted">
+                    Senin – Jumat, 08.00 – 16.00 WIB
+                  </p>
+                </div>
+              </div>
+              <!-- Helpdesk -->
+              <div class="flex gap-4">
+                <div
+                  class="w-10 h-10 shrink-0 bg-orange-50 rounded-full flex items-center justify-center"
+                >
+                  <span
+                    class="material-symbols-outlined text-orange-600 text-[20px]"
+                    >location_on</span
+                  >
+                </div>
+                <div>
+                  <h6 class="font-label text-label text-text-primary mb-1">
+                    Helpdesk Kampus
+                  </h6>
+                  <p class="text-[12px] text-text-muted mb-1">
+                    Gedung Rektorat Lt. 1
+                  </p>
+                  <p class="text-[12px] text-text-muted">Universitas Maju</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Ad/Banner Sidebar -->
+          <div
+            class="bg-gradient-to-br from-primary to-sidebar-gradient-start p-base-24 rounded-2xl text-white"
+          >
+            <span class="material-symbols-outlined text-[32px] mb-4"
+              >auto_awesome</span
+            >
+            <h4 class="font-card-title text-card-title mb-2">
+              Butuh Bantuan Cepat?
+            </h4>
+            <p class="text-[13px] text-white/80 leading-relaxed mb-6">
+              Gunakan asisten AI kami untuk mendapatkan jawaban instan terkait
+              kebijakan akademik kampus.
+            </p>
+            <button
+              class="w-full py-3 bg-white text-primary font-bold rounded-xl hover:bg-surface-dim transition-colors"
+            >
+              Coba AI Assistant
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Help Banner Bottom -->
+      <div
+        class="bg-light-blue-bg p-base-24 rounded-2xl border border-blue-100 flex flex-col md:flex-row items-center justify-between gap-base-24"
+      >
+        <div class="flex items-center gap-base-24">
+          <div
+            class="w-14 h-14 bg-primary rounded-full flex items-center justify-center text-white"
+          >
+            <span class="material-symbols-outlined text-[32px]"
+              >question_mark</span
+            >
+          </div>
+          <div>
+            <h4 class="font-card-title text-card-title text-text-primary mb-1">
+              Belum menemukan jawaban Anda?
+            </h4>
+            <p class="text-[14px] text-text-secondary">
+              Gunakan kolom pencarian di atas atau hubungi kami melalui kontak
+              support.
+            </p>
+          </div>
+        </div>
+        <button
+          class="px-base-32 py-3 bg-white border border-primary text-primary font-bold rounded-xl hover:bg-primary/5 transition-all"
+        >
+          Hubungi Support
+        </button>
+      </div>
+      <!-- Footer -->
+      <footer
+        class="mt-base-32 py-base-24 flex flex-col md:flex-row justify-between items-center border-t border-divider-gray text-metadata text-text-muted"
+      >
+        <p>© 2024 Universitas Maju. All rights reserved.</p>
+        <div class="flex items-center gap-base-24 mt-4 md:mt-0">
+          <a class="hover:text-primary transition-colors" href="#"
+            >Sistem Informasi Akademik v1.0.0</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >Kebijakan Privasi</a
+          >
+          <a class="hover:text-primary transition-colors" href="#"
+            >Syarat &amp; Ketentuan</a
+          >
+        </div>
+      </footer>
+    </main>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="help_bantuan.js"></script>
+  </body>
+</html>

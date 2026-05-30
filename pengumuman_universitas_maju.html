@@ -1,0 +1,392 @@
+<!doctype html>
+<html class="light" lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pengumuman - Universitas Maju</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="tailwind.config.js"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Sidebar Navigation -->
+    <aside
+      class="fixed left-0 top-0 h-full sidebar z-50 bg-gradient-to-b from-sidebar-gradient-start to-sidebar-gradient-end shadow-lg flex flex-col p-base-16 gap-base-8 text-white"
+    >
+      <div class="flex items-center gap-base-12 mb-base-24">
+        <div
+          class="w-[46px] h-[46px] shrink-0 bg-white rounded-xl flex items-center justify-center shadow-sm card-hover"
+        >
+          <span
+            class="material-symbols-outlined text-blue-600 text-[32px]"
+            style="font-variation-settings: &quot;FILL&quot; 1"
+            >school</span
+          >
+        </div>
+        <div class="flex flex-col justify-center logo-text-container">
+          <h1 class="font-page-title text-[18px] font-bold leading-none mb-1">
+            Universitas Maju
+          </h1>
+          <p class="text-[9.5px] opacity-80 uppercase tracking-widest leading-snug">
+            Unggul • Inovatif • Berintegritas
+          </p>
+        </div>
+      </div>
+      <nav
+        class="flex flex-col gap-1 overflow-y-auto flex-grow custom-scrollbar"
+      >
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="dashboard_universitas_maju.html"
+          data-page="dashboard"
+        >
+          <span class="material-symbols-outlined">dashboard</span> Dashboard
+        </a>
+        <div class="relative">
+          <button
+            class="dropdown-btn w-full flex items-center justify-between px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+            data-group="akademik"
+          >
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined">school</span> Akademik
+            </div>
+            <span
+              class="material-symbols-outlined text-sm dropdown-icon transition-transform"
+              >keyboard_arrow_down</span
+            >
+          </button>
+          <div class="dropdown-content pl-12 flex flex-col gap-1 mt-1 hidden">
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="jadwal_kuliah_universitas_maju.html"
+              data-page="jadwal_kuliah"
+              >Jadwal Kuliah</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="krs_refined_universitas_maju.html"
+              data-page="krs_refined"
+              >KRS</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="nilai_universitas_maju.html#transkrip"
+              data-page="nilai_transkrip"
+              >Transkrip Nilai</a
+            >
+            <a
+              class="sub-nav-item py-2 text-white/60 hover:text-white text-sm"
+              href="kurikulum_universitas_maju.html"
+              data-page="kurikulum"
+              >Kurikulum</a
+            >
+          </div>
+        </div>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="pengumuman_universitas_maju.html"
+          data-page="pengumuman"
+        >
+          <span class="material-symbols-outlined">campaign</span> Pengumuman
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="agenda_universitas_maju.html"
+          data-page="agenda"
+        >
+          <span class="material-symbols-outlined">event</span> Agenda
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="notifikasi_universitas_maju.html"
+          data-page="notifikasi"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          Notifikasi
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="profil_pengguna_universitas_maju.html"
+          data-page="profil_pengguna"
+        >
+          <span class="material-symbols-outlined">person</span> Profil
+        </a>
+        <a
+          class="nav-item flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="help_bantuan_universitas_maju.html"
+          data-page="help_bantuan"
+        >
+          <span class="material-symbols-outlined">help</span> Bantuan
+        </a>
+      </nav>
+      <div class="pt-base-16 mt-auto">
+        <a
+          class="flex items-center gap-3 px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 transition-colors duration-200 font-sidebar-menu text-sidebar-menu"
+          href="login_universitas_maju.html"
+        >
+          <span class="material-symbols-outlined">logout</span> Keluar
+        </a>
+      </div>
+    </aside>
+
+    <!-- TopNavBar -->
+    <header
+      class="fixed top-0 right-0 header-wrapper h-[80px] z-40 bg-surface-container-lowest border-b border-divider-gray flex items-center justify-between px-base-32"
+    >
+      <div
+        class="flex items-center gap-4 bg-surface-container-low px-4 py-2 rounded-xl w-full max-w-md"
+      >
+        <button id="sidebar-toggle-btn" class="p-2 hover:bg-black/5 rounded-full transition-colors flex items-center justify-center text-text-muted hover:text-primary shrink-0">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        <span class="material-symbols-outlined text-outline">search</span>
+        <input
+          class="bg-transparent border-none focus:ring-0 w-full font-body text-body text-text-primary placeholder:text-text-muted"
+          placeholder="Cari pengumuman..."
+          type="text"
+        />
+      </div>
+      <div class="flex items-center gap-8">
+        <button
+          class="relative p-2 text-text-secondary hover:bg-surface-container-low rounded-full transition-colors active:opacity-80"
+        >
+          <span class="material-symbols-outlined">notifications</span>
+          <span
+            class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white"
+            >3</span
+          >
+        </button>
+        <div
+          class="flex items-center gap-3 pl-4 border-l border-divider-gray cursor-pointer group"
+        >
+          <div class="text-right">
+            <p class="font-label text-label text-text-primary leading-tight">
+              Andi Pratama
+            </p>
+            <p class="font-metadata text-metadata text-text-muted">Mahasiswa</p>
+          </div>
+          <img
+            alt="Andi Pratama"
+            class="w-10 h-10 rounded-full bg-primary-fixed ring-2 ring-transparent group-hover:ring-primary/20 transition-all"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIEThCaEpab2tpDonm_jePrW9JS7fycrN9dQT4y2lkxoB9IB9-guGyQ9b9nwo9gfNfJNwX02D05z3SaK9M6__6lHSO7X-Pmu4SCXB72-BgftV3MdgEXBxb6dDHsRY5roRxTgDpiVO3yFUlGOPrcIKxa0pWEQ4iEFzYXtROtNmkclPLGBlWLsMBobCzlX1KMQQqdzhaQaVWQtO0Mu35VJt1Kwb-rL64R3JCin1FE1fbCoNh6aSEaQC9oLZvfxFjX07sQWgGXcvq0fGH"
+          />
+          <span class="material-symbols-outlined text-text-muted"
+            >expand_more</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Canvas -->
+    <main class="pt-[80px] main-content min-h-screen pb-base-32">
+      <div class="p-base-32 space-y-base-24">
+        <!-- Breadcrumbs -->
+        <div
+          class="flex items-center gap-2 font-metadata text-metadata text-text-muted"
+        >
+          <span>Portal Akademik</span>
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+          <span class="text-primary-container font-semibold">Pengumuman</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="space-y-1">
+          <h1 class="font-page-title text-page-title text-text-primary">
+            Pengumuman
+          </h1>
+          <p class="text-text-secondary">
+            Informasi terkini seputar kegiatan akademik dan kampus Universitas Maju.
+          </p>
+        </div>
+
+        <!-- Filter & Control Section -->
+        <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between bg-surface-container-lowest p-base-16 rounded-2xl border border-border-gray shadow-sm">
+          <div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 hide-scrollbar w-full lg:w-auto">
+            <button class="px-4 py-2 rounded-full bg-primary-container text-white font-semibold text-body whitespace-nowrap shadow-sm">Semua</button>
+            <button class="px-4 py-2 rounded-full bg-white border border-border-gray text-text-secondary hover:border-primary hover:text-primary transition-all font-medium text-body whitespace-nowrap">Akademik</button>
+            <button class="px-4 py-2 rounded-full bg-white border border-border-gray text-text-secondary hover:border-primary hover:text-primary transition-all font-medium text-body whitespace-nowrap">Keuangan</button>
+            <button class="px-4 py-2 rounded-full bg-white border border-border-gray text-text-secondary hover:border-primary hover:text-primary transition-all font-medium text-body whitespace-nowrap">Kegiatan</button>
+            <button class="px-4 py-2 rounded-full bg-white border border-border-gray text-text-secondary hover:border-primary hover:text-primary transition-all font-medium text-body whitespace-nowrap">Lainnya</button>
+          </div>
+          <div class="flex items-center gap-3 w-full lg:w-auto">
+            <div class="flex items-center gap-2 bg-white px-4 py-2 border border-border-gray rounded-xl font-label text-label text-text-secondary cursor-pointer hover:bg-surface-container-low transition-all flex-1 lg:flex-none">
+              <span class="material-symbols-outlined text-[20px]">sort</span>
+              <span>Terbaru</span>
+              <span class="material-symbols-outlined text-[20px]">expand_more</span>
+            </div>
+            <button class="p-2 bg-white border border-border-gray rounded-xl hover:bg-surface-container-low text-text-secondary transition-colors">
+              <span class="material-symbols-outlined">filter_list</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Content Layout: List + Detail -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-base-24">
+          <!-- Left: List Section -->
+          <div class="lg:col-span-7 space-y-4">
+            <!-- Important Item -->
+            <div class="group bg-white border-l-4 border-l-primary-container border border-border-gray p-base-24 rounded-2xl hover:shadow-md transition-all cursor-pointer relative overflow-hidden">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-12 h-12 bg-primary/5 flex items-center justify-center text-primary rounded-xl">
+                  <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">campaign</span>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2 py-0.5 bg-status-danger-bg text-status-danger-text text-[10px] font-bold rounded-full uppercase">Penting</span>
+                    <span class="font-metadata text-metadata text-text-muted">Akademik • 10 Okt 2023</span>
+                  </div>
+                  <h3 class="font-card-title text-[18px] font-bold text-text-primary mb-2 group-hover:text-primary transition-colors">Pendaftaran Wisuda Gelombang II Tahun 2023</h3>
+                  <p class="text-body text-text-secondary line-clamp-2">Diberitahukan kepada seluruh calon wisudawan bahwa pendaftaran wisuda gelombang II resmi dibuka mulai tanggal 15 Oktober 2023 melalui portal akademik...</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Regular Item -->
+            <div class="group bg-white border border-border-gray p-base-24 rounded-2xl hover:shadow-md transition-all cursor-pointer">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-12 h-12 bg-status-success-bg/10 flex items-center justify-center text-status-success-text rounded-xl">
+                  <span class="material-symbols-outlined text-status-success-text">payments</span>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="px-2 py-0.5 bg-status-info-bg text-status-info-text text-[10px] font-bold rounded-full uppercase">Baru</span>
+                    <span class="font-metadata text-metadata text-text-muted">Keuangan • 08 Okt 2023</span>
+                  </div>
+                  <h3 class="font-card-title text-[18px] font-bold text-text-primary mb-2 group-hover:text-primary transition-colors">Perpanjangan Masa Pembayaran UKT Semester Ganjil</h3>
+                  <p class="text-body text-text-secondary line-clamp-2">Batas akhir pembayaran UKT untuk mahasiswa aktif diperpanjang hingga akhir bulan ini guna memberikan kesempatan bagi mahasiswa yang terkendala teknis...</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Another Item -->
+            <div class="group bg-white border border-border-gray p-base-24 rounded-2xl hover:shadow-md transition-all cursor-pointer">
+              <div class="flex gap-4">
+                <div class="shrink-0 w-12 h-12 bg-primary/5 flex items-center justify-center text-primary rounded-xl">
+                  <span class="material-symbols-outlined text-primary">groups</span>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="font-metadata text-metadata text-text-muted">Kegiatan • 05 Okt 2023</span>
+                  </div>
+                  <h3 class="font-card-title text-[18px] font-bold text-text-primary mb-2 group-hover:text-primary transition-colors">Seminar Nasional: Masa Depan AI dalam Dunia Pendidikan</h3>
+                  <p class="text-body text-text-secondary line-clamp-2">Ikuti seminar nasional yang menghadirkan pakar teknologi ternama untuk membahas dampak kecerdasan buatan terhadap kurikulum masa depan...</p>
+                </div>
+              </div>
+            </div>
+            
+            <button class="w-full py-4 border-2 border-dashed border-border-gray rounded-2xl text-text-secondary font-semibold hover:border-primary hover:text-primary transition-all">Muat Lebih Banyak</button>
+          </div>
+
+          <!-- Right: Detail Section -->
+          <div class="lg:col-span-5">
+            <div class="bg-white border border-border-gray rounded-2xl overflow-hidden shadow-sm sticky top-[112px]">
+              <div class="relative h-48 w-full bg-primary-container">
+                <img alt="Announcement Banner" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWVlD5m8T7uU5sejQnG6NfnshfxCanMzhG6A9chGlC8vnJiGU4trQ5nl5OOiAuVAGRSAiYjvg3ztwFgDF4pIqN5zrITNhJqio2jOdqoOcKkD11L-_Ei8jo07MNaO-kVtp-d6qzN7OVS05uEPf8CoNskjeBLlfz2A41KvMkcNhlAz1cTZMaZagwhJJDb8wn5gnD888nx25heVdU5EdpzLrKikr2ebECI4CKE7yS4oNMTBKm6cta4O6HDpNi7fEqZRZVrWzjXufxZQ"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <span class="px-2 py-1 bg-primary text-white text-[10px] font-bold rounded-md uppercase mb-2 inline-block">Detail Pengumuman</span>
+                  <h4 class="text-white font-card-title text-[20px] font-bold leading-tight">Pendaftaran Wisuda Gelombang II</h4>
+                </div>
+              </div>
+              <div class="p-base-24 space-y-6">
+                <div class="flex items-center gap-4 border-b border-divider-gray pb-4">
+                  <div class="flex items-center gap-1.5 font-metadata text-metadata text-text-secondary">
+                    <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    <span>Publikasi: 10 Okt 2023</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 font-metadata text-metadata text-text-secondary">
+                    <span class="material-symbols-outlined text-[18px]">person</span>
+                    <span>Oleh: Admisi Pusat</span>
+                  </div>
+                </div>
+                <div class="text-body text-text-secondary space-y-4 leading-relaxed">
+                  <p>Berdasarkan Kalender Akademik Universitas Maju Tahun 2023/2024, pendaftaran wisuda gelombang II akan dilaksanakan dengan ketentuan sebagai berikut:</p>
+                  <ul class="list-disc pl-5 space-y-2">
+                    <li>Pendaftaran dibuka: 15 - 30 Oktober 2023</li>
+                    <li>Verifikasi berkas: 01 - 05 November 2023</li>
+                    <li>Pelaksanaan Wisuda: 20 Desember 2023</li>
+                  </ul>
+                  <p>Seluruh proses pendaftaran dilakukan secara daring melalui menu 'Wisuda' pada Portal Akademik ini. Pastikan seluruh nilai dan administrasi keuangan telah tervalidasi.</p>
+                </div>
+                <div class="space-y-3">
+                  <h5 class="font-label text-label font-bold text-text-primary border-b border-divider-gray pb-2">Lampiran Dokumen</h5>
+                  <div class="flex items-center justify-between p-3 bg-surface-container-low rounded-xl border border-border-gray group cursor-pointer hover:bg-white transition-all">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 bg-status-danger-bg flex items-center justify-center rounded-xl text-status-danger-text">
+                        <span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+                      </div>
+                      <div>
+                        <p class="font-label text-label text-text-primary group-hover:text-primary transition-colors">Panduan_Wisuda_2023.pdf</p>
+                        <p class="font-metadata text-metadata text-text-muted">2.4 MB • PDF Document</p>
+                      </div>
+                    </div>
+                    <span class="material-symbols-outlined text-text-muted group-hover:text-primary">download</span>
+                  </div>
+                </div>
+                <div class="p-4 bg-status-info-bg/50 rounded-xl border border-status-info-text/10 flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-full bg-status-info-text text-white flex items-center justify-center">
+                    <span class="material-symbols-outlined">support_agent</span>
+                  </div>
+                  <div>
+                    <p class="font-label text-[13px] font-bold text-status-info-text">Butuh Informasi Lebih Lanjut?</p>
+                    <p class="text-body text-text-secondary">Hubungi Biro Akademik: <span class="font-semibold text-text-primary">+62 812-3456-789</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer
+        class="mt-base-32 py-base-32 px-base-32 border-t border-divider-gray bg-surface-container-lowest flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6">
+          <p class="font-metadata text-metadata text-text-muted">
+            © 2024 Universitas Maju. All rights reserved.
+          </p>
+          <div class="hidden md:block w-[1px] h-4 bg-divider-gray"></div>
+          <a
+            class="font-metadata text-metadata text-text-muted hover:text-primary transition-colors"
+            href="#"
+            >Kebijakan Privasi</a
+          >
+          <a
+            class="font-metadata text-metadata text-text-muted hover:text-primary transition-colors"
+            href="help_bantuan_universitas_maju.html"
+            >Bantuan</a
+          >
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="font-label text-label font-medium text-text-secondary"
+            >Sistem Informasi Akademik v1.0.0</span
+          >
+        </div>
+      </footer>
+    </main>
+
+    <!-- Micro-interaction for cards -->
+    <script>
+      document.querySelectorAll('.group').forEach(card => {
+        card.addEventListener('click', () => {
+          // Subtle ripple/pulse effect simulation
+          card.style.transform = 'scale(0.98)';
+          setTimeout(() => {
+            card.style.transform = 'scale(1)';
+          }, 150);
+        });
+      });
+    </script>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
+  </body>
+</html>

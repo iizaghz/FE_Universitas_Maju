@@ -1,12 +1,19 @@
-Tampilan Frontend  pada Berbagai Perangkat 
+## Tampilan Frontend pada Berbagai Perangkat
 
- 
-Gambar 1: Mobile	 
-<img width="242" height="494" alt="image" src="https://github.com/user-attachments/assets/ff088b0f-9efd-4099-a504-010da8287957" />
+### Gambar 1. Mobile
 
-Gambar 2: Tablet
- <img width="363" height="504" alt="image" src="https://github.com/user-attachments/assets/89affc63-eb94-4f15-b554-ba503affe494" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/62982ace-c86a-49a7-b9b6-1610d912a256" width="220">
+</p>
 
- 
-Gambar 3: Desktop
-<img width="840" height="481" alt="image" src="https://github.com/user-attachments/assets/a5971d6e-5b04-4887-b5f7-5979f6f226de" />
+### Gambar 2. Tablet
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cf01ec12-d285-4f26-a01e-96630a75fd55" width="350">
+</p>
+
+### Gambar 3. Desktop
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/258cd631-2465-4c96-8e33-daffe6e9311f" width="700">
+</p>
